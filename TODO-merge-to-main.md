@@ -7,3 +7,4 @@ main is live and has changed since this branch started. When merging:
 - [ ] Do NOT add `noindex` back to the homepage. robots.txt is `Allow: /`; homepage is in sitemap.xml.
 - [ ] Keep the blog: `blog/`, `blog.css`, `img/blog/`, `tools/build_blog.py`, `tools/posts.py`, `sitemap.xml`, `robots.txt`, and the "Journal" link (`blog/`) in the homepage nav and footer.
 - [ ] Under each $39 Library buy button, keep the quiet savings line (small, secondary ink colour, no red, no badge): "Save $57 vs. buying all 8 sets separately ($96)". Not under the compact masthead button.
+- [ ] Keep the Google Search Console tag in the homepage <head>: `<meta name="google-site-verification" content="4meW_Nu3yF9PD4WnqsLRIQoH3UAK8vVfR-amlGWvHfs" />`
