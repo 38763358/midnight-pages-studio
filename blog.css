@@ -95,3 +95,7 @@ h1,h2,h3,p,figure,ul,ol,dl,dd{margin:0}
 .b-foot__fine{flex-basis:100%;border-top:1px solid #f2ece030;padding-top:1.25rem;font-size:.72rem;color:#c4c4be}
 @media(max-width:40rem){.b-wordmark{font-size:.6rem;letter-spacing:.12em}.b-nav li:first-child{display:none}.b-nav{gap:.9rem;font-size:.78rem}.b-nav__buy{padding:0 .7rem}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+
+.b-btn--ink{background:var(--b-ink);color:var(--b-paper)!important;gap:1.25rem;margin-top:1rem}.b-btn--ink:hover{background:var(--b-accent)}
+.b-btn__price{font:400 1.45rem/1 var(--b-serif)}
+.b-save{font-size:.8rem;color:var(--b-ink-soft);margin-top:.6rem}

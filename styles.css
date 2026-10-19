@@ -9,3 +9,5 @@ html.show-all .reveal{opacity:1!important;transform:none!important;transition:no
 body{overflow-x:clip}.deck-info .set__desc,.deck-info .set__count{display:block}html:not(.js) .deck-controls,html:not(.js) .deck-info{display:none}
 .sets{overflow:clip}
 .footer__contact{flex-basis:100%;font-size:.8rem;margin:0}.footer__contact a{text-decoration:underline}
+
+.buy__save{font-size:.78rem;color:var(--ink-soft);margin-top:14px}.buy__save+.buy__note{margin-top:4px}
