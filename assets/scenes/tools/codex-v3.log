@@ -1,0 +1,715 @@
+OpenAI Codex v0.163.0
+--------
+workdir: /workspace/midnight-pages-site
+model: gpt-6.1-sol
+provider: openai
+approval: never
+sandbox: danger-full-access
+reasoning effort: none
+reasoning summaries: none
+session id: 01a15249-b859-7d92-a26c-90419dc58778
+--------
+user
+Rewrite index.html, styles.css and main.js in /workspace/midnight-pages-site per DESIGN-v3.md (read it fully; it overrides DESIGN.md). Current branch v3-rifle-appointed.
+Rules: keep all English copy, prices, tag counts, product descriptions and every Gumroad href exactly as in the current index.html (read it first; the copy is reused, layout replaced). Keep head meta tags. No invented reviews/stats. Images: assets/scenes/*.webp (scene photos) and img/*.webp (product images). Fonts: local fonts/ only. Remove the tag deck, tilt, gloss, decorative numbers, roman numerals, giant headings. main.js only: IntersectionObserver opacity fade-in for images (html.js gating so no-JS shows everything), very light hero parallax (max 40px translateY, rAF, transform only), both disabled under prefers-reduced-motion. Provide window.__revealAll() to show everything instantly. Semantic HTML, alt text describing each scene and naming the tag design visible. Mobile 390px must be excellent: no horizontal overflow, horizontally scrollable nav row, hero image then text panel below it. Do not git commit or push. Verify with headless chrome (playwright-core is at /workspace/mps-tools-8df2/node_modules; chrome at /usr/bin/google-chrome) that there are no console errors or overflow at 390 and 1440. Print short summary.
+
+codex
+I’ll read the current page and all of DESIGN-v3.md, rebuild the layout while preserving the copy and links, then check it in Chrome at 390px and 1440px.
+exec
+/bin/bash -lc "pwd && rg --files -g 'AGENTS.md' -g 'DESIGN*' -g 'index.html' -g 'styles.css' -g 'main.js' -g '*.webp' -g '*.woff*' -g '*.ttf'" in /workspace/midnight-pages-site
+ succeeded in 0ms:
+/workspace/midnight-pages-site
+main.js
+DESIGN.md
+DESIGN-v3.md
+assets/scenes/prompt-desk.webp
+assets/scenes/use-closing-keys.webp
+assets/scenes/use-openhouse-cookies.webp
+assets/scenes/use-popby-porch.webp
+assets/scenes/hero-thanksgiving-mobile.webp
+assets/scenes/hero-thanksgiving.webp
+index.html
+styles.css
+fonts/Inter-Medium.woff
+fonts/InstrumentSerif-Regular.woff
+fonts/InstrumentSerif-Italic.woff
+fonts/Inter-Regular.woff
+img/gingham-kitchen-480.webp
+img/gilded-hush-800.webp
+img/herbarium-480.webp
+img/curb-appeal-480.webp
+img/gilded-hush-480.webp
+img/library-480.webp
+img/fair-isle-480.webp
+img/riso-papercut-480.webp
+img/free-sample-480.webp
+img/chalk-talk-800.webp
+img/gingham-kitchen-800.webp
+img/prompt-pack-480.webp
+img/riso-papercut-800.webp
+img/postmark-480.webp
+img/library-800.webp
+img/herbarium-800.webp
+img/fair-isle-800.webp
+img/chalk-talk-480.webp
+img/postmark-800.webp
+img/curb-appeal-800.webp
+img/prompt-pack-800.webp
+img/free-sample-800.webp
+
+exec
+/bin/bash -lc 'cat index.html && cat DESIGN-v3.md' in /workspace/midnight-pages-site
+ succeeded in 0ms:
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Midnight Pages Studio · Pop-by gift tags and printables for real estate agents</title>
+<meta content="Printable, editable pop-by gift tags, client newsletters and AI prompts for US real estate agents. Designed to look like something worth keeping." name="description"/>
+<meta content="noindex, nofollow" name="robots"/>
+<meta content="#14213a" name="theme-color"/>
+<link href="favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="apple-touch-icon.png" rel="apple-touch-icon"/>
+<meta content="website" property="og:type"/>
+<meta content="Midnight Pages Studio" property="og:site_name"/>
+<meta content="Midnight Pages Studio · The Pop-By Tag Library" property="og:title"/>
+<meta content="109 printable pop-by gift tag designs and 12 client newsletters for real estate agents." property="og:description"/>
+<meta content="https://38763358.github.io/midnight-pages-studio/img/og.jpg" property="og:image"/>
+<meta content="1200" property="og:image:width"/><meta content="675" property="og:image:height"/>
+<meta content="https://38763358.github.io/midnight-pages-studio/" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link as="font" crossorigin="" href="fonts/InstrumentSerif-Regular.woff" rel="preload" type="font/woff"/>
+<link href="styles.css" rel="stylesheet"/>
+<script defer="True" src="main.js"></script></head>
+<body id="top">
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+<div class="wrap masthead__row">
+<a aria-label="Midnight Pages Studio, home" class="wordmark" href="#top">MIDNIGHT PAGES STUDIO</a>
+<nav aria-label="Primary">
+<ul class="nav">
+<li><a href="#library">Library</a></li>
+<li><a href="#sets">Gift tags</a></li>
+<li><a href="#prompts">Prompts</a></li>
+<li><a href="#sample">Free sample</a></li>
+</ul>
+</nav>
+<a class="masthead__buy" href="https://midnightpagesstudio.gumroad.com/l/pop-by-tag-library"><span class="buy-long">Buy the Library $39</span><span class="buy-short">Buy · $39</span></a></div>
+</header>
+<main id="main">
+<section aria-labelledby="hero-title" class="hero" id="library">
+<div class="wrap hero__grid">
+<div class="hero__text reveal">
+<p class="eyebrow">The complete collection</p>
+<h1 class="display" id="hero-title">The Pop-By<br/><em>Tag Library</em></h1>
+<p class="lede">Eight tag collections, 109 printable and editable designs, plus The Home Letter 2027: twelve monthly client newsletters, already written.</p>
+<p class="lede lede--small">For the bag of apples on a past client’s porch, the pie at Thanksgiving, the candle after closing. Type your name once, print at home or at a shop, and tie it on.</p>
+<div class="buy">
+<a class="btn" href="https://midnightpagesstudio.gumroad.com/l/pop-by-tag-library">Buy the Library <span class="btn__price">$39</span></a>
+<p class="buy__note">Instant download via Gumroad. All eight sets bought separately cost $56.</p>
+</div>
+</div>
+<figure class="hero__figure"><div class="mockup-drop"><div class="sheet tilt"><img alt="The Pop-By Tag Library: tags from all eight collections arranged in a grid" fetchpriority="high" height="800" sizes="(min-width: 64rem) 46vw, 92vw" src="img/library-800.webp" srcset="img/library-480.webp 480w, img/library-800.webp 800w" width="800"/><span aria-hidden="true" class="gloss"></span></div></div>
+
+<figcaption>Herbarium, Gingham Kitchen, Riso Papercut, Gilded Hush, Postmark, Curb Appeal, Chalk Talk and Fair Isle.</figcaption>
+</figure>
+</div>
+<div aria-label="Included collections" class="wrap collection-strip"><span class="collection-strip__label">In the Library</span><span>Herbarium</span><span>Gingham Kitchen</span><span>Riso Papercut</span><span>Gilded Hush</span><span>Postmark</span><span>Curb Appeal</span><span>Chalk Talk</span><span>Fair Isle</span></div></section>
+<section aria-labelledby="how-title" class="how">
+<div class="wrap how__layout">
+<h2 class="display display--md how__heading" id="how-title">How agents <em>use them</em></h2>
+<ol class="how__list">
+<li class="reveal"><span class="how__n">I.</span><h3>Pop-bys</h3><p>A small seasonal gift and a short note, dropped at the door. The tag carries your name so the gift does the remembering.</p></li>
+<li class="reveal"><span class="how__n">II.</span><h3>Client touches</h3><p>Closing anniversaries, housewarmings, a thank-you for a referral. A reason to reach out that isn’t a market update.</p></li>
+<li class="reveal"><span class="how__n">III.</span><h3>Open houses</h3><p>Tie a tag to cookies or water bottles on the counter. Visitors leave with your name in hand.</p></li>
+</ol>
+</div>
+</section>
+<section aria-labelledby="sets-title" class="sets" id="sets">
+<div class="wrap sets__layout"><div class="sets__sticky"><header class="section-head">
+<p class="eyebrow">Gift tag sets</p>
+<h2 class="display display--md" id="sets-title">Eight sets, <em>$7 each</em></h2>
+<p class="section-head__note">Each set includes Thanksgiving, holiday, New Year and anytime tags in rectangle and round sizes. Pick the one that sounds like you.</p>
+</header><div aria-label="Gift tag collections. Use left and right arrow keys." class="deck" role="group" tabindex="0"><div class="tag" data-index="0"><img alt="Curb Appeal gift tag set: sample tags laid out on paper" decoding="async" height="480" loading="lazy" sizes="(min-width: 64rem) 36vw, 78vw" src="img/curb-appeal-480.webp" srcset="img/curb-appeal-480.webp 480w, img/curb-appeal-800.webp 800w" width="480"/><a class="tag__buy" href="https://midnightpagesstudio.gumroad.com/l/curb-appeal-pop-by-gift-tags">Buy Curb Appeal · $7</a></div><div class="tag" data-index="1"><img alt="Postmark gift tag set: sample tags laid out on paper" decoding="async" height="480" loading="lazy" sizes="(min-width: 64rem) 36vw, 78vw" src="img/postmark-480.webp" srcset="img/postmark-480.webp 480w, img/postmark-800.webp 800w" width="480"/><a class="tag__buy" href="https://midnightpagesstudio.gumroad.com/l/postmark-society-pop-by-gift-tags">Buy Postmark · $7</a></div><div class="tag" data-index="2"><img alt="Fair Isle gift tag set: sample tags laid out on paper" decoding="async" height="480" loading="lazy" sizes="(min-width: 64rem) 36vw, 78vw" src="img/fair-isle-480.webp" srcset="img/fair-isle-480.webp 480w, img/fair-isle-800.webp 800w" width="480"/><a class="tag__buy" href="https://midnightpagesstudio.gumroad.com/l/fair-isle-lodge-pop-by-gift-tags">Buy Fair Isle · $7</a></div><div class="tag" data-index="3"><img alt="Herbarium gift tag set: sample tags laid out on paper" decoding="async" height="480" loading="lazy" sizes="(min-width: 64rem) 36vw, 78vw" src="img/herbarium-480.webp" srcset="img/herbarium-480.webp 480w, img/herbarium-800.webp 800w" width="480"/><a class="tag__buy" href="https://midnightpagesstudio.gumroad.com/l/herbarium-market-pop-by-gift-tags">Buy Herbarium · $7</a></div><div class="tag" data-index="4"><img alt="Gilded Hush gift tag set: sample tags laid out on paper" decoding="async" height="480" loading="lazy" sizes="(min-width: 64rem) 36vw, 78vw" src="img/gilded-hush-480.webp" srcset="img/gilded-hush-480.webp 480w, img/gilded-hush-800.webp 800w" width="480"/><a class="tag__buy" href="https://midnightpagesstudio.gumroad.com/l/gilded-hush-pop-by-gift-tags">Buy Gilded Hush · $7</a></div><div class="tag" data-index="5"><img alt="Chalk Talk gift tag set: sample tags laid out on paper" decoding="async" height="480" loading="lazy" sizes="(min-width: 64rem) 36vw, 78vw" src="img/chalk-talk-480.webp" srcset="img/chalk-talk-480.webp 480w, img/chalk-talk-800.webp 800w" width="480"/><a class="tag__buy" href="https://midnightpagesstudio.gumroad.com/l/chalk-talk-pop-by-gift-tags">Buy Chalk Talk · $7</a></div><div class="tag" data-index="6"><img alt="Gingham Kitchen gift tag set: sample tags laid out on paper" decoding="async" height="480" loading="lazy" sizes="(min-width: 64rem) 36vw, 78vw" src="img/gingham-kitchen-480.webp" srcset="img/gingham-kitchen-480.webp 480w, img/gingham-kitchen-800.webp 800w" width="480"/><a class="tag__buy" href="https://midnightpagesstudio.gumroad.com/l/gingham-kitchen-pop-by-gift-tags">Buy Gingham Kitchen · $7</a></div><div class="tag" data-index="7"><img alt="Riso Papercut gift tag set: sample tags laid out on paper" decoding="async" height="480" loading="lazy" sizes="(min-width: 64rem) 36vw, 78vw" src="img/riso-papercut-480.webp" srcset="img/riso-papercut-480.webp 480w, img/riso-papercut-800.webp 800w" width="480"/><a class="tag__buy" href="https://midnightpagesstudio.gumroad.com/l/riso-papercut-pop-by-gift-tags">Buy Riso Papercut · $7</a></div></div><div class="deck-controls"><button aria-label="Previous collection" class="deck-prev" type="button">← Prev</button><span class="deck-counter">01 / 08</span><button aria-label="Next collection" class="deck-next" type="button">Next →</button></div><p class="deck-hint">Drag or swipe to leaf through</p><div aria-atomic="true" aria-live="polite" class="deck-info"></div></div>
+
+<ul class="sets__index" role="list">
+<li class="set reveal is-active" data-index="0">
+<a class="set__link" href="https://midnightpagesstudio.gumroad.com/l/curb-appeal-pop-by-gift-tags">
+
+<span class="set__meta"><span class="set__no">01</span><span class="set__price">$7</span></span>
+<h3 class="set__name">Curb Appeal</h3>
+<p class="set__desc">Hand-drawn houses and a looping script. The natural fit for housewarmings and closing anniversaries.</p>
+<span class="set__count">13 printable, editable tags</span>
+<span class="set__cta">Buy Curb Appeal <span aria-hidden="true">→</span></span>
+</a>
+</li>
+<li class="set reveal" data-index="1">
+<a class="set__link" href="https://midnightpagesstudio.gumroad.com/l/postmark-society-pop-by-gift-tags">
+
+<span class="set__meta"><span class="set__no">02</span><span class="set__price">$7</span></span>
+<h3 class="set__name">Postmark</h3>
+<p class="set__desc">Bold sunburst stamps in brick, teal and ink. Feels like mail worth opening.</p>
+<span class="set__count">14 printable, editable tags</span>
+<span class="set__cta">Buy Postmark <span aria-hidden="true">→</span></span>
+</a>
+</li>
+<li class="set reveal" data-index="2">
+<a class="set__link" href="https://midnightpagesstudio.gumroad.com/l/fair-isle-lodge-pop-by-gift-tags">
+
+<span class="set__meta"><span class="set__no">03</span><span class="set__price">$7</span></span>
+<h3 class="set__name">Fair Isle</h3>
+<p class="set__desc">Knitted patterns in cranberry and pine. Cozy enough for every porch from November to January.</p>
+<span class="set__count">13 printable, editable tags</span>
+<span class="set__cta">Buy Fair Isle <span aria-hidden="true">→</span></span>
+</a>
+</li>
+<li class="set reveal" data-index="3">
+<a class="set__link" href="https://midnightpagesstudio.gumroad.com/l/herbarium-market-pop-by-gift-tags">
+
+<span class="set__meta"><span class="set__no">04</span><span class="set__price">$7</span></span>
+<h3 class="set__name">Herbarium</h3>
+<p class="set__desc">Botanical drawings on plum, forest and teal. Pairs well with jams, honey and seasonal fruit.</p>
+<span class="set__count">13 printable, editable tags</span>
+<span class="set__cta">Buy Herbarium <span aria-hidden="true">→</span></span>
+</a>
+</li>
+<li class="set reveal" data-index="4">
+<a class="set__link" href="https://midnightpagesstudio.gumroad.com/l/gilded-hush-pop-by-gift-tags">
+
+<span class="set__meta"><span class="set__no">05</span><span class="set__price">$7</span></span>
+<h3 class="set__name">Gilded Hush</h3>
+<p class="set__desc">Quiet ivory, navy and oxblood with fine gold details. Made for your luxury book of clients.</p>
+<span class="set__count">14 printable, editable tags</span>
+<span class="set__cta">Buy Gilded Hush <span aria-hidden="true">→</span></span>
+</a>
+</li>
+<li class="set reveal" data-index="5">
+<a class="set__link" href="https://midnightpagesstudio.gumroad.com/l/chalk-talk-pop-by-gift-tags">
+
+<span class="set__meta"><span class="set__no">06</span><span class="set__price">$7</span></span>
+<h3 class="set__name">Chalk Talk</h3>
+<p class="set__desc">Chalkboard lettering and line drawings. Easygoing, friendly, good for neighbors and past clients alike.</p>
+<span class="set__count">14 printable, editable tags</span>
+<span class="set__cta">Buy Chalk Talk <span aria-hidden="true">→</span></span>
+</a>
+</li>
+<li class="set reveal" data-index="6">
+<a class="set__link" href="https://midnightpagesstudio.gumroad.com/l/gingham-kitchen-pop-by-gift-tags">
+
+<span class="set__meta"><span class="set__no">07</span><span class="set__price">$7</span></span>
+<h3 class="set__name">Gingham Kitchen</h3>
+<p class="set__desc">Checked picnic prints and homey icons. Made for baked goods and anything from the kitchen.</p>
+<span class="set__count">14 printable, editable tags</span>
+<span class="set__cta">Buy Gingham Kitchen <span aria-hidden="true">→</span></span>
+</a>
+</li>
+<li class="set reveal" data-index="7">
+<a class="set__link" href="https://midnightpagesstudio.gumroad.com/l/riso-papercut-pop-by-gift-tags">
+
+<span class="set__meta"><span class="set__no">08</span><span class="set__price">$7</span></span>
+<h3 class="set__name">Riso Papercut</h3>
+<p class="set__desc">Cut-paper shapes in saturated print-shop color. The bright one in the family.</p>
+<span class="set__count">14 printable, editable tags</span>
+<span class="set__cta">Buy Riso Papercut <span aria-hidden="true">→</span></span>
+</a>
+</li>
+</ul>
+</div>
+</section>
+<section aria-labelledby="prompts-title" class="prompts" id="prompts">
+<div class="wrap prompts__grid">
+<figure class="prompts__figure"><div class="booklet-wrap reveal"><div class="sheet tilt booklet"><img alt="Cover of the AI Listing and Marketing Prompt Pack for Real Estate Agents" decoding="async" height="800" loading="lazy" sizes="(min-width: 64rem) 36vw, 92vw" src="img/prompt-pack-800.webp" srcset="img/prompt-pack-480.webp 480w, img/prompt-pack-800.webp 800w" width="800"/><span aria-hidden="true" class="gloss"></span></div></div>
+
+<span aria-hidden="true" class="prompts__number">93</span></figure>
+<div class="prompts__text reveal">
+<p class="eyebrow eyebrow--light">For the writing in between</p>
+<h2 class="display display--md" id="prompts-title">AI Listing &amp; Marketing <em>Prompt Pack</em></h2>
+<p>93 copy-and-paste prompts for ChatGPT, Claude or Gemini, written for the work agents do every week: listing descriptions, follow-up emails, social posts, open house promotion.</p>
+<p>Every prompt has a filled-in example, a sample output and Fair Housing guardrails. PDF, editable Word file and CSV.</p>
+<a class="btn btn--light" href="https://midnightpagesstudio.gumroad.com/l/ai-listing-marketing-prompt-pack-real-estate-agents">Buy the Prompt Pack <span class="btn__price">$24</span></a>
+</div>
+</div>
+</section>
+<section aria-labelledby="sample-title" class="sample" id="sample">
+<div class="wrap sample__inner reveal">
+<p class="eyebrow">Free</p>
+<h2 class="display display--md" id="sample-title">Ten prompts, <em>on the house</em></h2>
+<p>A free sample of ten prompts from the pack. Enter your email on Gumroad and it’s yours. Try them before you buy anything.</p>
+<a class="btn" href="https://midnightpagesstudio.gumroad.com/l/hmgomk">Get the free sample</a>
+<figure class="sample-mockup"><div class="sample-paper"><img alt="Free sample booklet with ten AI listing and marketing prompts for real estate agents" decoding="async" height="450" loading="lazy" sizes="(max-width: 40rem) 72vw, (max-width: 64rem) 40vw, 36vw" src="img/free-sample-800.webp" srcset="img/free-sample-480.webp 480w, img/free-sample-800.webp 800w" width="800"/></div></figure></div>
+</section>
+</main>
+<footer class="footer">
+<div class="wrap footer__row">
+<p class="wordmark wordmark--small">MIDNIGHT PAGES STUDIO</p>
+<ul class="footer__links">
+<li><a href="https://midnightpagesstudio.gumroad.com">Gumroad shop</a></li>
+<li><a href="#library">Tag Library</a></li>
+<li><a href="#sets">Gift tags</a></li>
+<li><a href="#prompts">Prompt Pack</a></li>
+<li><a href="#sample">Free sample</a></li>
+</ul>
+<p class="footer__fine">Digital downloads for US real estate agents. Nothing ships; everything prints.</p>
+</div>
+</footer>
+</body>
+</html>
+# v3 设计规格 — Rifle 的场景 × Appointed 的克制
+
+定位：一家街角纸品店的季节橱窗。先让中介看到吊牌系在派饼上、放在客户门口的画面，再让他买。
+- **场景摄影（学 Rifle）**：首屏和关键段落用满版、暖色、节日感的礼物场景。每张图里都有我们真实的吊牌设计（AI 生成场景，空白吊牌用透视变换替换成站内产品图里裁出的单张吊牌，见 assets/scenes/tools/composite.py）。
+- **排版（学 Appointed）**：小号衬线标题，留白多，文字少，左对齐，没有装饰。
+- **导航（真实商店）**：深蓝促销条，下面是 Logo 居中的刊头，再下面一排按场合和品类的链接。
+
+## 禁止
+巨型标题（任何标题都不超过 44px）、倾斜样机、卡叠或拖拽手势、装饰性数字和罗马数字、圆角卡片、阴影卡片、渐变、emoji、全大写眉题在每段重复出现。
+
+## 字体与颜色
+- 字体：Instrument Serif（标题、价格，正体为主，斜体只点一个词）；Inter 400/500（正文 15–16px、导航 13px）。
+- 颜色：纸色 #fbf8f2（页面），浅纸色 #f3eee4（商品图底），墨色 #1a2236，次要文字 #5b6170，深蓝 #14213a（促销条、Prompt 段、页脚），砖红 #a4472b（价格和"当季"链接，少量使用）。
+
+## 版式（从上到下）
+1. **促销条**（深蓝，12px，居中）："Instant download via Gumroad · Nothing ships; everything prints." 再加一个链接 "Get ten free prompts →"（free sample 的 Gumroad 链接）。
+2. **刊头**：三栏网格。左边 "Shop on Gumroad"（店铺链接），中间 wordmark "MIDNIGHT PAGES STUDIO"（Inter 500，15px，字距 .34em），右边 "Buy the Library — $39"（文字链接，带下划线，始终可见）。下面一排导航，以细线分隔：Thanksgiving pop-bys（砖红，锚点到 #library）· Gift tags · The Tag Library · Prompt Pack · Free sample。刊头吸顶，背景是纸色。手机：促销条、wordmark 加右侧 "Buy · $39"；导航变成可横向滑动的一行。
+3. **首屏（Thanksgiving）**：满版图片 assets/scenes/hero-thanksgiving.webp，高度 min(86vh, 760px)，object-fit cover，焦点在左边的派饼。文字压在图片右侧三分之一的柔焦桌面上，放在一块纸色面板里（不是卡片：纯色 #fbf8f2，无阴影，无圆角，padding 32px，宽约 380px）。面板内容依次是：小字 "The Pop-By Tag Library"；H1 衬线 40px "For the pie at *Thanksgiving*."；一句原文案 "Eight tag collections, 109 printable and editable designs, plus The Home Letter 2027: twelve monthly client newsletters, already written."；按钮 "Buy the Library $39"（深蓝底实心矩形）；小字 "Instant download via Gumroad. All eight sets bought separately cost $56."。
+   手机：图片用 hero-thanksgiving-mobile.webp，高 70vh，面板放在图片下方，不叠在图上。
+4. **Gift tag sets, $7 each**（标题 32px，左对齐，右边 "Shop all on Gumroad" 链接）：说明文字用现有的 section-head__note。8 个系列：电脑每行 4 个，手机每行 2 个。每格：方形产品图（img/*-480/800.webp，放在 #f3eee4 底上，无边框无阴影）→ 名称（衬线 20px）和右侧价格 $7 → 一行描述（14px，次要色，最多两行）→ 张数（12px）。整格是指向该系列 Gumroad 页面的链接。悬停时图片透明度 0.92，名称加下划线，不做位移。
+5. **How agents use them**（标题 32px）：三张场景图横排（手机竖排），比例 4:3。每张下面是小标题加原文：
+   - Pop-bys → use-popby-porch.webp
+   - Client touches → use-closing-keys.webp
+   - Open houses → use-openhouse-cookies.webp
+6. **The Tag Library 详情**：左边 7 列，放现有的 library-800.webp（产品总览，放在 #f3eee4 底上，平放不倾斜）；右边 5 列：标题 "The Pop-By Tag Library"，两段原文（lede 和 lede--small），图注列出八个系列名，然后是按钮 $39 和价格说明。
+7. **Prompt Pack**：满宽两栏，背景纸色，不用深蓝。左边是 prompt-desk.webp 场景图（Appointed 风桌面），右边是标题 "AI Listing & Marketing Prompt Pack"、两段原文、按钮 "Buy the Prompt Pack $24"。
+8. **Free sample**：一条浅色横带 #f3eee4，左边标题 "Ten prompts, on the house" 加原文，右边按钮 "Get the free sample"。
+9. **页脚**：深蓝，wordmark 加链接一行，加 "Digital downloads for US real estate agents. Nothing ships; everything prints."
+
+## 间距
+内容最大宽 1280px，左右边距 clamp(20px, 4vw, 48px)；段落之间 96px（手机 64px）；标题下方 24px。
+
+## 动效（只有两种）
+- 图片缓慢淡入：进入视口时 opacity 0→1，800ms，cubic-bezier(0.22,1,0.36,1)，只动 opacity，用 IntersectionObserver。理由：避免图片硬生生地蹦出来，保持安静。
+- 首屏大图极轻的视差：图片 translateY 最多 40px，跟随滚动，用 requestAnimationFrame，只改 transform。理由：给满版大图一点景深，但不抢注意力。
+- prefers-reduced-motion 时两者都关闭。不用 JS 时内容默认可见。
+
+exec
+/bin/bash -lc 'git status --short && git branch --show-current && cat main.js && cat styles.css' in /workspace/midnight-pages-site
+ succeeded in 0ms:
+?? assets/scenes/tools/codex-v3.log
+?? assets/scenes/tools/codex-v3.md
+v3-rifle-appointed
+(() => {
+'use strict';
+const root = document.documentElement;
+const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+const reveals = [...document.querySelectorAll('.reveal')];
+window.__revealAll = () => {
+  root.classList.add('show-all');
+  document.querySelectorAll('img').forEach(img => img.loading = 'eager');
+  reveals.forEach(el => el.classList.add('is-visible'));
+};
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver(entries => entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('is-visible'); observer.unobserve(e.target); }
+  }), { threshold: .15 });
+  reveals.forEach((el, i) => { el.style.setProperty('--delay', `${i % 3 * 80}ms`); observer.observe(el); });
+} else window.__revealAll();
+root.classList.add('js');
+const masthead = document.querySelector('.masthead');
+new IntersectionObserver(([e]) => masthead.classList.toggle('is-scrolled', !e.isIntersecting), {rootMargin:'-80px 0px 0px 0px'}).observe(document.querySelector('.hero'));
+const sticky = document.querySelector('.sets__sticky');
+const fitSticky = () => sticky.style.setProperty('--sticky-top', `${Math.min(115, innerHeight-sticky.offsetHeight-24)}px`);
+new ResizeObserver(fitSticky).observe(sticky);
+addEventListener('resize', fitSticky);
+const deck = document.querySelector('.deck');
+const tags = [...deck.querySelectorAll('.tag')];
+const rows = [...document.querySelectorAll('.set')];
+const info = document.querySelector('.deck-info');
+const counter = document.querySelector('.deck-counter');
+let current = 0, frame = 0, gesture = null, suppress = false, syncUntil = 0;
+function paint(x = 0) {
+  tags.forEach((tag, i) => {
+    const depth = (i - current + 8) % 8;
+    tag.style.zIndex = 8 - depth;
+    tag.style.opacity = depth < 3 ? '1' : '0';
+    tag.style.pointerEvents = depth === 0 ? 'auto' : 'none';
+    tag.inert = depth !== 0;
+    tag.style.transform = depth === 0 ? `translateX(${x}px) rotate(${x * .05}deg)` : `translate(${depth * 8}px,${depth * 6}px) rotate(${depth % 2 ? 2 * depth : -2 * depth}deg) scale(${1 - .04 * depth})`;
+  });
+}
+function clean() {
+  cancelAnimationFrame(frame); frame = 0;
+  tags.forEach(t => t.style.removeProperty('will-change'));
+  deck.classList.remove('is-dragging');
+}
+function select(index, manual = true) {
+  clean(); current = (index + 8) % 8; paint();
+  if (manual) syncUntil = performance.now() + 1000;
+  rows.forEach((row, i) => {
+    row.classList.toggle('is-active', i === current);
+    if (i === current) row.setAttribute('aria-current', 'true'); else row.removeAttribute('aria-current');
+  });
+  counter.textContent = `${String(current + 1).padStart(2, '0')} / 08`;
+  const row = rows[current];
+  info.replaceChildren(...['.set__name', '.set__desc', '.set__count'].map(s => row.querySelector(s).cloneNode(true)));
+  const buy = document.createElement('a'); buy.href = row.querySelector('a').href;
+  buy.textContent = row.querySelector('.set__cta').textContent + ' · $7'; info.append(buy);
+}
+select(0, false);
+document.querySelector('.deck-prev').onclick = () => select(current - 1);
+document.querySelector('.deck-next').onclick = () => select(current + 1);
+deck.addEventListener('keydown', e => {
+  if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') { e.preventDefault(); select(current + (e.key === 'ArrowRight' ? 1 : -1)); }
+});
+rows.forEach((row, i) => {
+  row.addEventListener('pointerenter', e => { if (e.pointerType === 'mouse') select(i); });
+  row.addEventListener('focusin', () => select(i));
+  row.addEventListener('click', () => select(i));
+});
+const rowObserver = new IntersectionObserver(entries => {
+  if (performance.now() < syncUntil || gesture || frame) return;
+  const visible = entries.filter(e => e.isIntersecting).sort((a,b) => Math.abs(a.boundingClientRect.top - innerHeight * .5) - Math.abs(b.boundingClientRect.top - innerHeight * .5));
+  if (visible.length) select(Number(visible[0].target.dataset.index), false);
+}, {rootMargin:'-35% 0px -35% 0px',threshold:0});
+rows.forEach(r => rowObserver.observe(r));
+deck.addEventListener('pointerdown', e => {
+  if (!e.isPrimary || e.button !== 0) return;
+  clean(); paint(); suppress = false;
+  gesture = {id:e.pointerId,x:e.clientX,y:e.clientY,dx:0,lock:null,target:e.target,samples:[{x:e.clientX,t:performance.now()}]};
+  deck.setPointerCapture(e.pointerId);
+});
+deck.addEventListener('pointermove', e => {
+  const g = gesture; if (!g || g.id !== e.pointerId) return;
+  g.dx = e.clientX - g.x;
+  const dy = e.clientY - g.y;
+  if (!g.lock && Math.max(Math.abs(g.dx),Math.abs(dy)) >= 8) g.lock = Math.abs(g.dx) > Math.abs(dy) ? 'x' : 'y';
+  if (g.lock !== 'x') return;
+  const now = performance.now(); g.samples.push({x:e.clientX,t:now});
+  g.samples = g.samples.filter(p => now - p.t <= 100);
+  deck.classList.add('is-dragging'); tags[current].style.willChange = 'transform';
+  if (!frame) frame = requestAnimationFrame(() => { frame = 0; if (gesture) paint(gesture.dx); });
+});
+function finish(e, cancelled = false) {
+  const g = gesture; if (!g || g.id !== e.pointerId) return;
+  gesture = null; clean();
+  if (deck.hasPointerCapture(e.pointerId)) deck.releasePointerCapture(e.pointerId);
+  const distance = Math.hypot(e.clientX - g.x,e.clientY - g.y);
+  suppress = distance >= 6 || cancelled;
+  if (!cancelled && distance < 6) {
+    const link = g.target.closest('a');
+    if (link) { suppress = true; location.assign(link.href); }
+    paint(); return;
+  }
+  if (g.lock !== 'x') { paint(); return; }
+  const now = performance.now();
+  const samples = g.samples.filter(p => now - p.t <= 100);
+  const first = samples[0];
+  const velocity = first ? (e.clientX - first.x) / Math.max(1,now - first.t) : 0;
+  const fling = !cancelled && (Math.abs(g.dx) > deck.clientWidth * .3 || Math.abs(velocity) > .5);
+  const direction = Math.abs(velocity) > .5 ? Math.sign(velocity) : Math.sign(g.dx);
+  if (reduced.matches) { if (fling) select(current + (direction < 0 ? 1 : -1)); else paint(); return; }
+  let x = g.dx, v = fling ? direction * Math.max(Math.abs(velocity) * 16.667, 25) : 0;
+  const target = direction * deck.clientWidth * 1.4;
+  tags[current].style.willChange = 'transform';
+  function animate() {
+    if (fling) {
+      x += v; v *= .95;
+      if (Math.abs(x) >= Math.abs(target) || Math.abs(v) < .1) { select(current + (direction < 0 ? 1 : -1)); return; }
+    } else {
+      v = (v - x * .12) * .78; x += v;
+      if (Math.abs(x) < .5 && Math.abs(v) < .05) { clean(); paint(); return; }
+    }
+    paint(x); frame = requestAnimationFrame(animate);
+  }
+  frame = requestAnimationFrame(animate);
+}
+deck.addEventListener('pointerup', e => finish(e));
+deck.addEventListener('pointercancel', e => finish(e,true));
+deck.addEventListener('click', e => { if (suppress) { e.preventDefault(); suppress = false; } },true);
+const fine = matchMedia('(hover:hover) and (pointer:fine)');
+document.querySelectorAll('.tilt').forEach(el => {
+  let x=0,y=0,tx=0,ty=0,alpha=0,goal=0,raf=0;
+  const gloss=el.querySelector('.gloss');
+  function tick() {
+    x+=(tx-x)*.12; y+=(ty-y)*.12; alpha+=(goal-alpha)*.12;
+    el.style.transform=`perspective(1000px) rotateX(${-y*6}deg) rotateY(${x*6}deg) rotate(${innerWidth<640?-1.5:-3}deg)`;
+    gloss.style.transform=`translate(${x*30}%,${y*30}%)`; gloss.style.opacity=alpha;
+    if (Math.abs(tx-x)+Math.abs(ty-y)+Math.abs(goal-alpha)>.001) raf=requestAnimationFrame(tick); else raf=0;
+  }
+  function move(e) {
+    const r=el.getBoundingClientRect(); tx=Math.max(-.5,Math.min(.5,(e.clientX-r.left)/r.width-.5)); ty=Math.max(-.5,Math.min(.5,(e.clientY-r.top)/r.height-.5));goal=.35;if(!raf)raf=requestAnimationFrame(tick);
+  }
+  function leave(){tx=ty=goal=0;if(!raf)raf=requestAnimationFrame(tick);}
+  function bind(){
+    el.removeEventListener('pointermove',move);el.removeEventListener('pointerleave',leave);
+    cancelAnimationFrame(raf);raf=0;el.style.removeProperty('transform');gloss.style.opacity=0;
+    if(fine.matches&&!reduced.matches){el.addEventListener('pointermove',move);el.addEventListener('pointerleave',leave);}
+  }
+  bind();fine.addEventListener('change',bind);reduced.addEventListener('change',bind);
+});
+})();
+@font-face{font-family:Instrument;src:url('fonts/InstrumentSerif-Regular.woff')}@font-face{font-family:Instrument;src:url('fonts/InstrumentSerif-Italic.woff');font-style:italic}@font-face{font-family:Inter;src:url('fonts/Inter-Regular.woff');font-weight:400}@font-face{font-family:Inter;src:url('fonts/Inter-Medium.woff');font-weight:500}
+:root{--midnight:#111c33;--midnight-2:#1b2a4a;--paper:#f2ece0;--paper-2:#e8dfcd;--ink-soft:#4a5266;--gold:#b8914a;--brick:#a4472b;--ease:cubic-bezier(.22,1,.36,1);--shadow:0 1px 1px rgba(17,28,51,.12),0 18px 30px -12px rgba(17,28,51,.28),0 50px 80px -30px rgba(17,28,51,.25);--texture:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath filter='url(%23n)' opacity='.7' d='M0 0h180v180H0z'/%3E%3C/svg%3E")}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:100px}body{margin:0;background:var(--paper);color:var(--midnight);font:400 1.0625rem/1.65 Inter,sans-serif}body::after,.sheet::after,.tag::after{content:'';position:absolute;inset:0;background-image:var(--texture);opacity:.07;mix-blend-mode:multiply;pointer-events:none}body::after{position:fixed;z-index:20}a{color:inherit;text-underline-offset:5px}button,a{-webkit-tap-highlight-color:transparent}button{font:inherit;color:inherit;cursor:pointer}a:focus-visible,button:focus-visible,.deck:focus-visible{outline:2px solid var(--brick);outline-offset:5px}img{display:block;width:100%;height:auto}figure,p,h1,h2,h3{margin:0}p+p{margin-top:1.2rem}ul,ol{list-style:none;padding:0;margin:0}.wrap{width:calc(100% - 112px);max-width:1328px;margin-inline:auto}.skip{position:fixed;top:-100px;z-index:100;background:var(--paper);padding:12px}.skip:focus{top:0}.masthead{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid #111c3320}.masthead__row{display:flex;align-items:center;gap:32px;min-height:88px}.wordmark{font-size:.78rem;letter-spacing:.14em;text-decoration:none;font-weight:500}.nav{display:flex;gap:26px;font-size:.8rem}.nav a{text-decoration:none;display:flex;min-height:44px;align-items:center}.masthead nav{margin-left:auto}.masthead__buy{position:relative;isolation:isolate;border:1px solid var(--midnight);padding:10px 18px;font-size:.78rem;text-decoration:none;min-height:44px;display:flex;align-items:center}.masthead__buy::before{content:'';position:absolute;inset:0;background:var(--midnight);opacity:0;z-index:-1;transition:opacity 400ms var(--ease)}.masthead.is-scrolled .masthead__buy{color:var(--paper)}.masthead.is-scrolled .masthead__buy::before{opacity:1}.buy-short{display:none}.hero{overflow:hidden;padding-top:76px}.hero__grid{display:grid;grid-template-columns:7fr 5fr;align-items:center;min-height:690px}.hero__text{position:relative;z-index:2;padding-bottom:0}.eyebrow,.kicker{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;font-weight:500;color:var(--brick);margin-bottom:24px}.display{font-family:Instrument,serif;font-weight:400;font-size:clamp(3.4rem,9vw,8.5rem);line-height:.92;letter-spacing:-.035em}.display em{font-weight:400}.lede{max-width:34rem;margin-top:30px}.lede--small{font-size:.93rem;color:var(--ink-soft);margin-top:18px;max-width:30rem}.buy{margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:space-between;gap:28px;min-height:52px;padding:13px 24px;background:var(--midnight);color:var(--paper);text-decoration:none;font-size:.84rem}.btn:hover{background:var(--brick)}.btn__price{font-family:Instrument;font-size:1.65rem;line-height:1}.buy__note{max-width:25rem;font-size:.7rem;color:var(--ink-soft);margin-top:12px}.hero__figure{width:min(600px,112%);margin-left:0;position:relative;padding-top:8px}.sheet{position:relative;background:var(--paper);padding:5%;box-shadow:var(--shadow);transform:rotate(-3deg);isolation:isolate}.sheet::before{content:'';position:absolute;inset:0;background:var(--paper-2);transform:translate(14px,10px) rotate(3deg);z-index:-1;box-shadow:0 1px 2px #111c3320}.sheet img{position:relative;z-index:1}.gloss{position:absolute;inset:-20%;background:radial-gradient(ellipse at center,#fff9,transparent 65%);opacity:0;pointer-events:none;z-index:3}.sheet{overflow:visible}.hero__figure figcaption{font:italic 1.05rem/1.4 Instrument;max-width:29rem;padding:28px 30px 40px;color:var(--ink-soft)}.collection-strip{border-top:1px solid var(--gold);display:flex;align-items:center;justify-content:flex-start;flex-wrap:wrap;gap:0;row-gap:8px;padding-block:24px;font:italic 1.15rem/1.5 Instrument,serif;color:var(--midnight)}.collection-strip>span{white-space:nowrap}.collection-strip>span+span:not(:nth-child(2))::before{content:"·";color:var(--gold);margin-inline:12px}.collection-strip .collection-strip__label{font:500 .62rem/1.5 Inter,sans-serif;letter-spacing:.18em;text-transform:uppercase;margin-right:24px}.how{padding:6rem 0}.how__layout{display:grid;grid-template-columns: minmax(0, .9fr) minmax(0,1.25fr);gap:70px}.how__heading{position:sticky;top:125px;align-self:start;max-width:7em}.kicker{position:sticky;top:125px;align-self:start;color:var(--midnight)}.how__list li{position:relative;display:grid;grid-template-columns:48px minmax(0,1fr);column-gap:18px;padding:26px 0;border-bottom:1px solid #b8914a70}.how__list li:first-child{padding-top:0}.how__list li:last-child{border-bottom:0}.how__list h3,.how__list p{grid-column:2}.how__n{grid-column:1;grid-row:1/3;font:italic 2.5rem/1 Instrument;color:var(--brick)}.how h3{font:400 2rem/1.2 Instrument;margin-bottom:12px}.how p{font-size:.96rem;color:var(--ink-soft)}.sets{background:var(--paper-2);padding:100px 0 120px}.sets__layout{display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:start}.sets__sticky{position:sticky;top:var(--sticky-top,115px)}.display--md{font-size:clamp(2.6rem,6vw,5.2rem);line-height:.98}.section-head__note{font-size:.9rem;max-width:30rem;margin-top:24px;color:var(--ink-soft)}.deck{position:relative;width:min(100%,520px);aspect-ratio:1/1.12;margin:66px auto 0;touch-action:pan-y;cursor:grab}.deck.is-dragging{cursor:grabbing}.tag{position:absolute;inset:0;display:flex;flex-direction:column;background:var(--paper);padding:34px 16px 12px;box-shadow:var(--shadow);transform-origin:50% 85%}.tag::before{content:'';position:absolute;top:-30px;left:50%;height:53px;width:1px;background:var(--gold);z-index:3}.tag img{min-height:0;object-fit:contain;user-select:none;-webkit-user-drag:none;pointer-events:none}.tag__buy{display:flex;justify-content:center;align-items:center;min-height:44px;font-size:.75rem;text-decoration:none;background:var(--midnight);color:var(--paper);margin-top:auto;flex-shrink:0}.tag__buy:hover{background:var(--brick)}.tag__buy::before{content:'';position:absolute;width:8px;height:8px;background:var(--paper-2);border:1px solid var(--gold);border-radius:50%;top:15px;left:calc(50% - 4px)}.tag:not(:first-child){opacity:0;pointer-events:none}.deck-controls{display:flex;align-items:center;justify-content:center;gap:24px;margin-top:24px}.deck-controls button{background:none;border:0;min-width:44px;min-height:44px;padding:0 10px}.deck-controls button,.deck-counter{font:500 .8rem/1.5 Inter,sans-serif;letter-spacing:.12em;text-transform:uppercase}.deck-controls button:hover{text-decoration:underline;text-underline-offset:5px}.deck-hint{text-align:center;font:italic 1.1rem/1.5 Instrument,serif;margin-top:8px}.deck-info{display:none}.sets__index{padding-top:5px}.set{border-top:1px solid #111c3340}.set:last-child{border-bottom:1px solid #111c3340}.set__link{position:relative;display:block;padding:1.6rem 0 1.6rem 50px;text-decoration:none}.set__meta{display:flex;justify-content:space-between;align-items:center}.set__no{position:absolute;left:0;top:42px;font-size:.72rem;letter-spacing:.12em;color:var(--ink-soft)}.set__price{font:1.8rem Instrument;color:var(--brick);position:absolute;right:0;top:27px}.set__name{font:400 2.9rem/1.1 Instrument;margin-right:38px}.set__desc{font-size:.88rem;color:var(--ink-soft);margin-top:15px;max-width:25rem}.set__count{display:block;font-size:.67rem;color:var(--ink-soft);margin-top:15px}.set__cta{display:block;font-size:.75rem;margin-top:13px;color:var(--brick)}.set.is-active .set__no,.set.is-active .set__cta{color:var(--brick)}.set.is-active{position:relative}.set.is-active::before{content:"";position:absolute;left:-14px;top:1.6rem;bottom:1.6rem;width:2px;background:var(--brick)}.set.is-active .set__name{font-style:italic}.prompts{background:var(--midnight);color:var(--paper);padding:135px 0;overflow:hidden}.prompts__grid{display:grid;grid-template-columns:1fr 1fr;gap:110px;align-items:center}.prompts__figure{position:relative;padding:30px 12px 150px}.booklet{transform:rotate(-4deg);padding:0}.booklet::before{transform:translate(14px,10px) rotate(2deg);background:#ded5c5}.booklet::after{z-index:2;background-image:linear-gradient(90deg,#111c3370,transparent 3%,#ffffff30 4%,transparent 8%),var(--texture);opacity:.8}.prompts__number{position:absolute;font:italic 10rem/.8 Instrument;bottom:0;right:-35px;color:var(--gold)}.eyebrow--light{color:var(--gold)}.prompts__text>p:not(.eyebrow){font-size:.95rem;max-width:34rem;color:#dedbce;margin-top:28px}.prompts__text .btn{margin-top:30px}.btn--light{background:var(--paper);color:var(--midnight)}.btn--light:hover{color:var(--paper)}.sample{padding:125px 0}.sample__inner{position:relative;display:grid;grid-template-columns:1.2fr 1fr;column-gap:130px}.sample__inner>.eyebrow,.sample__inner>h2,.sample__inner>p,.sample__inner>.btn{grid-column:1}.sample__inner>p:not(.eyebrow){max-width:31rem;margin-top:25px;font-size:.95rem;color:var(--ink-soft)}.sample__inner>.btn{justify-self:start;margin-top:30px}.sample-mockup{grid-column:2;grid-row:1/5;align-self:center;transform:rotate(3deg);filter:drop-shadow(0 1px 1px #111c331f) drop-shadow(0 18px 15px #111c3329) drop-shadow(0 35px 28px #111c331a)}.sample-paper{position:relative;background:var(--paper);padding:5px 5px 9px;clip-path:polygon(0 0,100% 0,100% calc(100% - 3px),96% 100%,91% calc(100% - 2px),86% 100%,80% calc(100% - 3px),74% 100%,69% calc(100% - 2px),62% 100%,55% calc(100% - 3px),49% 100%,43% calc(100% - 2px),36% 100%,28% calc(100% - 3px),21% 100%,14% calc(100% - 2px),7% 100%,0 calc(100% - 3px))}.sample-paper::after{content:"";position:absolute;inset:0;background-image:var(--texture);opacity:.07;mix-blend-mode:multiply;pointer-events:none}.footer{background:var(--midnight);color:var(--paper);padding:48px 0 30px}.footer__row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:25px}.wordmark--small{font:400 2.5rem Instrument;letter-spacing:0}.footer__links{display:flex;gap:24px;font-size:.73rem}.footer__links a{display:flex;align-items:center;min-height:44px;text-decoration:none}.footer__fine{flex-basis:100%;font-size:.68rem;color:#c4c4be;border-top:1px solid #f2ece030;padding-top:24px}.reveal{opacity:1}.js .reveal{transition:opacity 700ms var(--ease),transform 700ms var(--ease);transition-delay:var(--delay,0ms)}.js .reveal:not(.is-visible){opacity:0;transform:translateY(24px)}.js .mockup-drop{animation:paper-drop 900ms var(--ease) both}@keyframes paper-drop{from{opacity:0;transform:translateY(30px) rotate(-6deg)}to{opacity:1;transform:translateY(0) rotate(0)}}
+@media(min-width:90rem){.hero__grid{min-height:740px}}
+@media(max-width:64rem){.wrap{width:calc(100% - 64px)}.masthead__row{gap:20px}.nav{gap:16px}.hero__grid{min-height:600px}.sets__layout{gap:50px}.how__layout{gap:30px}.prompts__grid{gap:55px}.sample__inner{column-gap:55px}.footer__row{display:block}.footer__links{margin-block:20px}.hero__figure{width:110%}}
+@media(max-width:40rem){.wrap{width:calc(100% - 40px)}.masthead__row{min-height:72px;gap:12px;justify-content:space-between}.wordmark{font-size:.59rem;letter-spacing:.09em}.masthead nav,.buy-long{display:none}.buy-short{display:inline}.masthead__buy{font-size:.72rem;padding:10px 13px;flex-shrink:0;white-space:nowrap}.hero{padding-top:44px}.hero__grid{display:block;min-height:0}.display{font-size:clamp(3.6rem,15vw,6rem)}.eyebrow{margin-bottom:20px}.hero__text{padding-bottom:35px}.lede{font-size:1rem;margin-top:24px}.lede--small{font-size:.86rem;margin-top:18px}.buy{margin-top:26px}.buy__note{font-size:.67rem}.hero__figure{width:94%;margin:0 auto;padding-top:10px}.sheet{transform:rotate(-1.5deg)}.hero__figure figcaption{font-size:.95rem;padding:25px 12px 28px;max-width:90%}.collection-strip{padding-block:19px;flex-wrap:wrap;row-gap:8px}.collection-strip .collection-strip__label{flex-basis:100%;margin-right:0}.how{padding:65px 0}.how__layout{display:block}.kicker{position:static;margin-bottom:36px}.how__heading{position:static;margin-bottom:36px}.how__list li{grid-template-columns:38px minmax(0,1fr);column-gap:12px}.how h3{font-size:2rem}.how p{font-size:.87rem}.sets{padding:65px 0}.sets__layout{display:block}.sets__sticky{position:static}.display--md{font-size:clamp(2.6rem,12vw,4.2rem)}.section-head__note{font-size:.86rem}.deck{width:80vw;aspect-ratio:1/1.2;margin-top:60px}.tag{padding:30px 12px 8px}.deck-controls{margin-top:22px}.deck-info{display:block;margin:24px 0}.deck-info h3{font:400 2.3rem Instrument}.deck-info p{font-size:.86rem;color:var(--ink-soft);margin:10px 0}.deck-info .set__count{margin-top:10px}.deck-info a{color:var(--brick);display:inline-flex;align-items:center;min-height:44px;font-size:.8rem}.set__link{padding:19px 0 19px 35px;min-height:90px}.set__name{font-size:1.85rem}.set__no{top:27px;font-size:.63rem}.set__price{top:18px;font-size:1.5rem}.set__desc,.set__count{display:none}.set__cta{font-size:.66rem;margin-top:7px}.prompts{padding:65px 0}.prompts__grid{display:flex;flex-direction:column;gap:55px}.prompts__figure{width:86%;padding:15px 5px 35px;align-self:flex-start}.booklet{transform:rotate(-2deg)}.prompts__number{display:none}.prompts__text>p:not(.eyebrow){font-size:.9rem;margin-top:23px}.sample{padding:65px 0 75px}.sample__inner{display:block}.sample__inner>p:not(.eyebrow){font-size:.9rem}.sample-mockup{width:80%;margin:36px auto 0}.footer{padding-top:38px}.wordmark--small{font-size:2rem}.footer__links{flex-wrap:wrap;gap:0 23px}.footer__fine{font-size:.66rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.js .reveal:not(.is-visible){opacity:1;transform:none}}
+html.show-all .reveal{opacity:1!important;transform:none!important;transition:none!important}html.show-all .mockup-drop{animation:none!important}
+body{overflow-x:clip}.deck-info .set__desc,.deck-info .set__count{display:block}html:not(.js) .deck-controls,html:not(.js) .deck-info{display:none}
+.sets{overflow:clip}
+
+exec
+/bin/bash -lc 'ls -la assets/scenes && rg --files /workspace -g AGENTS.md' in /workspace/midnight-pages-site
+ exited 1 in 0ms:
+total 1940
+drwxr-xr-x 4 box box   4096 Oct 19 11:51 .
+drwxr-xr-x 3 box box   4096 Oct 19 11:46 ..
+-rw-r--r-- 1 box box 119221 Oct 19 11:51 hero-thanksgiving-mobile.jpg
+-rw-r--r-- 1 box box  66636 Oct 19 11:51 hero-thanksgiving-mobile.webp
+-rw-r--r-- 1 box box 255505 Oct 19 11:49 hero-thanksgiving.jpg
+-rw-r--r-- 1 box box 136354 Oct 19 11:51 hero-thanksgiving.webp
+-rw-r--r-- 1 box box 279105 Oct 19 11:49 prompt-desk.jpg
+-rw-r--r-- 1 box box 170310 Oct 19 11:51 prompt-desk.webp
+drwxr-xr-x 2 box box   4096 Oct 19 11:48 raw
+drwxr-xr-x 2 box box   4096 Oct 19 11:52 tools
+-rw-r--r-- 1 box box 197999 Oct 19 11:49 use-closing-keys.jpg
+-rw-r--r-- 1 box box  85218 Oct 19 11:51 use-closing-keys.webp
+-rw-r--r-- 1 box box 194080 Oct 19 11:49 use-openhouse-cookies.jpg
+-rw-r--r-- 1 box box  90144 Oct 19 11:51 use-openhouse-cookies.webp
+-rw-r--r-- 1 box box 229663 Oct 19 11:49 use-popby-porch.jpg
+-rw-r--r-- 1 box box 112560 Oct 19 11:51 use-popby-porch.webp
+
+exec
+/bin/bash -lc "cp index.html /tmp/mps-original.html && python - <<'PY'
+from PIL import Image,ImageOps,ImageDraw
+from pathlib import Path
+files=list(Path('assets/scenes').glob('*.webp'))
+out=Image.new('RGB',(900,220*((len(files)+2)//3)),'white')
+for i,p in enumerate(files):
+ im=Image.open(p); print(p,im.size)
+ out.paste(ImageOps.contain(im,(300,190)),((i%3)*300,(i//3)*220)); ImageDraw.Draw(out).text(((i%3)*300,(i//3)*220+192),p.stem,fill='black')
+out.save('/tmp/scenes.jpg')
+PY" in /workspace/midnight-pages-site
+ exited 127 in 0ms:
+/bin/bash: line 1: python: command not found
+
+2026-10-19T03:52:20.075952Z ERROR codex_core::tools::router: error=unable to locate image at `/tmp/scenes.jpg`: No such file or directory (os error 2)
+exec
+/bin/bash -lc "python3 - <<'PY'
+from PIL import Image,ImageOps,ImageDraw
+from pathlib import Path
+files=list(Path('assets/scenes').glob('*.webp'))
+out=Image.new('RGB',(900,440),'white')
+for i,p in enumerate(files):
+ im=Image.open(p); print(p,im.size)
+ out.paste(ImageOps.contain(im,(300,190)),((i%3)*300,(i//3)*220)); ImageDraw.Draw(out).text(((i%3)*300,(i//3)*220+192),p.stem,fill='black')
+out.save('/tmp/scenes.jpg')
+PY" in /workspace/midnight-pages-site
+ succeeded in 131ms:
+assets/scenes/hero-thanksgiving.webp (1280, 720)
+assets/scenes/hero-thanksgiving-mobile.webp (540, 720)
+assets/scenes/use-popby-porch.webp (1280, 720)
+assets/scenes/use-openhouse-cookies.webp (1280, 720)
+assets/scenes/use-closing-keys.webp (1280, 720)
+assets/scenes/prompt-desk.webp (1280, 720)
+
+codex
+The v3 spec replaces the deck with an eight-product grid and leads with the Thanksgiving scene. I’ve saved the original page to check the copy and Gumroad links, and inspected the scene photos for alt text and cropping.
+exec
+/bin/bash -lc "cat > /tmp/build-mps.py <<'PY'
+from bs4 import BeautifulSoup
+from pathlib import Path
+from html import escape
+s=BeautifulSoup(Path('/tmp/mps-original.html').read_text(),'html.parser')
+def text(sel): return s.select_one(sel).get_text(' ',strip=True)
+def raw(sel): return str(s.select_one(sel))
+shop='https://midnightpagesstudio.gumroad.com'
+lib=s.select_one('.buy .btn')['href']; prompt=s.select_one('.prompts .btn')['href']; sample=s.select_one('.sample .btn')['href']
+lede=text('.lede'); small=text('.lede--small'); note=text('.buy__note')
+btn=lambda href,label: f'<a class=\"btn\" href=\"{href}\">{label}</a>'
+cards=[]
+for li in s.select('.sets__index .set'):
+ name=text_dummy=li.select_one('h3').get_text(); slug={'Postmark':'postmark','Fair Isle':'fair-isle'}.get(name,name.lower().replace(' ','-'))
+ href=li.a['href']; desc=li.select_one('.set__desc').get_text(); count=li.select_one('.set__count').get_text()
+ cards.append(f'''<li><a class=\"product\" href=\"{href}\"><img src=\"img/{slug}-480.webp\" srcset=\"img/{slug}-480.webp 480w, img/{slug}-800.webp 800w\" sizes=\"(max-width: 600px) 44vw, (max-width: 900px) 45vw, 23vw\" width=\"800\" height=\"800\" loading=\"lazy\" decoding=\"async\" alt=\"{name} gift tag set: printable designs arranged on paper\"><div class=\"product__heading\"><h3>{name}</h3><span class=\"price\">"'$7</span></div><p class="product__desc">{desc}</p><p class="product__count">{count}</p><span class="product__buy">Buy {name} · $7 <span aria-hidden="true">→</span></span></a></li>'"''')
+scenes=[('use-popby-porch','A bag of apples on an autumn porch with a plum Herbarium gift tag tied to the handle'),('use-closing-keys','House keys and a candle on a wooden table beside a cream Curb Appeal gift tag'),('use-openhouse-cookies','Cookies in a glass jar on an open house kitchen counter with a dark Fair Isle gift tag')]
+uses=[]
+for li,(file,alt) in zip(s.select('.how__list li'),scenes):
+ uses.append(f'<li><img src=\"assets/scenes/{file}.webp\" width=\"1280\" height=\"960\" loading=\"lazy\" decoding=\"async\" alt=\"{alt}\">{li.h3}{li.p}</li>')
+html=f'''<"'!DOCTYPE html>
+<html lang="en">
+{s.head}
+<body id="top">
+<a class="skip" href="#main">Skip to content</a>
+<div class="promotion">Instant download via Gumroad · Nothing ships; everything prints. <a href="{sample}">Get ten free prompts →</a></div>
+<header class="masthead">
+<div class="wrap masthead__row"><a class="shop-link" href="{shop}">Shop on Gumroad</a><a class="wordmark" href="#top" aria-label="Midnight Pages Studio, home">MIDNIGHT PAGES STUDIO</a><a class="masthead__buy" href="{lib}"><span class="buy-long">Buy the Library — $39</span><span class="buy-short">Buy · $39</span></a></div>
+<nav aria-label="Primary"><ul class="nav wrap"><li><a class="seasonal" href="#library">Thanksgiving pop-bys</a></li><li><a href="#sets">Gift tags</a></li><li><a href="#library-details">The Tag Library</a></li><li><a href="#prompts">Prompt Pack</a></li><li><a href="#sample">Free sample</a></li></ul></nav>
+</header>
+<main id="main">
+<section class="hero" id="library" aria-labelledby="hero-title">
+<picture class="hero__photo"><source media="(max-width: 600px)" srcset="assets/scenes/hero-thanksgiving-mobile.webp"><img src="assets/scenes/hero-thanksgiving.webp" width="1280" height="720" fetchpriority="high" alt="Thanksgiving pie on a warm autumn table with a cream Curb Appeal house illustration gift tag tied around the pie dish"></picture>
+<div class="hero__panel"><p class="intro">The Pop-By Tag Library</p><h1 id="hero-title">For the pie at <em>Thanksgiving</em>.</h1><p>{lede}</p>{btn(lib,'"'Buy the Library <span>"'$39</span>'"')}<p class=\"buy-note\">{note}</p></div>
+</section>
+<section class=\"section wrap\" id=\"sets\" aria-labelledby=\"sets-title\"><header class=\"section-head\"><div><h2 id=\"sets-title\">Gift tag sets, <span class=\"price\">"'$7 each</span></h2><p class="section-note">{text('"'.section-head__note')}</p></div><a class=\"shop-all\" href=\"{shop}\">Shop all on Gumroad</a></header><ul class=\"products\">{''.join(cards)}</ul></section>
+<section class=\"section wrap how\" aria-labelledby=\"how-title\"><h2 id=\"how-title\">How agents <em>use them</em></h2><ul class=\"use-grid\">{''.join(uses)}</ul></section>
+<section class=\"section wrap library-details\" id=\"library-details\" aria-labelledby=\"library-title\"><figure><img src=\"img/library-800.webp\" srcset=\"img/library-480.webp 480w, img/library-800.webp 800w\" sizes=\"(max-width: 900px) 90vw, 53vw\" width=\"800\" height=\"800\" loading=\"lazy\" decoding=\"async\" alt=\"The Pop-By Tag Library: Herbarium, Gingham Kitchen, Riso Papercut, Gilded Hush, Postmark, Curb Appeal, Chalk Talk and Fair Isle designs arranged in a grid\"></figure><div class=\"detail-text\"><h2 id=\"library-title\">The Pop-By Tag Library</h2><p>{lede}</p><p>{small}</p><p class=\"collection-caption\">{text('.hero__figure figcaption')}</p>{btn(lib,'Buy the Library <span>"'$39</span>'"')}<p class=\"buy-note\">{note}</p></div></section>
+<section class=\"section prompts\" id=\"prompts\" aria-labelledby=\"prompts-title\"><img class=\"prompt-scene\" src=\"assets/scenes/prompt-desk.webp\" width=\"1280\" height=\"720\" loading=\"lazy\" decoding=\"async\" alt=\"AI Listing and Marketing Prompt Pack booklet beside coffee, a laptop and a pen on a sunlit desk; no gift tag is shown\"><div class=\"detail-text\"><p class=\"intro\">For the writing in between</p><h2 id=\"prompts-title\">AI Listing &amp; Marketing Prompt Pack</h2>{''.join(str(p) for p in s.select('.prompts__text > p:not(.eyebrow)'))}{btn(prompt,'Buy the Prompt Pack <span>"'$24</span>'"')}</div></section>
+<section class=\"sample\" id=\"sample\" aria-labelledby=\"sample-title\"><div class=\"wrap sample__inner\"><div><p class=\"intro\">Free</p><h2 id=\"sample-title\">Ten prompts, <em>on the house</em></h2><p>{text('.sample__inner > p:not(.eyebrow)')}</p></div>{btn(sample,'Get the free sample')}</div></section>
+</main>
+<footer class=\"footer\"><div class=\"wrap footer__row\"><p class=\"wordmark\">MIDNIGHT PAGES STUDIO</p>{raw('.footer__links')}{raw('.footer__fine')}</div></footer>
+</body></html>'''
+Path('index.html').write_text(html)
+PY
+python3 /tmp/build-mps.py
+cat > styles.css <<'CSS'
+@font-face{font-family:Instrument;src:url('fonts/InstrumentSerif-Regular.woff') format('woff');font-weight:400;font-display:swap}
+@font-face{font-family:Instrument;src:url('fonts/InstrumentSerif-Italic.woff') format('woff');font-style:italic;font-display:swap}
+@font-face{font-family:Inter;src:url('fonts/Inter-Regular.woff') format('woff');font-weight:400;font-display:swap}
+@font-face{font-family:Inter;src:url('fonts/Inter-Medium.woff') format('woff');font-weight:500;font-display:swap}
+:root{--paper:#fbf8f2;--pale:#f3eee4;--ink:#1a2236;--muted:#5b6170;--navy:#14213a;--brick:#a4472b;--gutter:clamp(20px,4vw,48px)}
+*{box-sizing:border-box}html{scroll-padding-top:150px}body{margin:0;background:var(--paper);color:var(--ink);font:400 15px/1.65 Inter,sans-serif}a{color:inherit;text-underline-offset:4px}a:focus-visible{outline:2px solid var(--brick);outline-offset:5px}img{display:block;width:100%;height:auto}p,h1,h2,h3,figure{margin:0}ul{list-style:none;margin:0;padding:0}h1,h2,h3{font-family:Instrument,serif;font-weight:400;line-height:1.12}h1{font-size:40px}h2{font-size:32px}h3{font-size:20px}em{font-weight:400}.wrap{width:calc(100% - var(--gutter)*2);max-width:1280px;margin-inline:auto}.skip{position:fixed;top:-100px;left:20px;z-index:10;background:var(--paper);padding:12px}.skip:focus{top:12px}.promotion{background:var(--navy);color:var(--paper);text-align:center;font-size:12px;padding:9px 20px}.promotion a{margin-left:20px;white-space:nowrap}.masthead{position:sticky;top:0;z-index:5;background:var(--paper)}.masthead__row{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:20px;min-height:84px}.wordmark{font-size:15px;font-weight:500;letter-spacing:.34em;text-decoration:none;line-height:1.5}.shop-link,.masthead__buy{font-size:13px}.masthead__buy{justify-self:end;white-space:nowrap}.buy-short{display:none}.masthead nav{border-block:1px solid #1a223625}.nav{display:flex;justify-content:center;gap:36px;font-size:13px}.nav a{display:block;padding:13px 0;text-decoration:none;white-space:nowrap}.nav a:hover{text-decoration:underline}.seasonal{color:var(--brick)}.hero{position:relative;height:min(86vh,760px);min-height:600px;overflow:hidden}.hero__photo{position:absolute;inset:0;display:block;overflow:hidden}.hero__photo img{height:calc(100% + 40px);object-fit:cover;object-position:30% center}.hero__panel{position:absolute;right:var(--gutter);top:50%;transform:translateY(-50%);width:380px;padding:32px;background:var(--paper)}.intro{font-size:12px;margin-bottom:16px}.hero h1{margin-bottom:24px}.hero__panel>p:not(.intro):not(.buy-note){font-size:15px}.btn{display:inline-flex;gap:20px;justify-content:center;align-items:center;min-height:48px;padding:12px 22px;background:var(--navy);color:var(--paper);text-decoration:none;font-size:13px}.btn span{font-family:Instrument,serif;font-size:22px;line-height:1}.hero .btn,.detail-text .btn{margin-top:24px}.buy-note{font-size:12px;color:var(--muted);margin-top:14px;line-height:1.6}.section{margin-block:96px}.section-head{display:flex;justify-content:space-between;gap:32px;align-items:baseline;margin-bottom:32px}.section-note{max-width:680px;color:var(--muted);margin-top:24px}.shop-all{font-size:13px;white-space:nowrap}.price{color:var(--brick);font-family:Instrument,serif}.products{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:40px 24px}.product{display:block;text-decoration:none;min-width:0}.product img{aspect-ratio:1;object-fit:contain;background:var(--pale)}.product:hover img{opacity:.92}.product:hover h3{text-decoration:underline;text-underline-offset:4px}.product__heading{display:flex;justify-content:space-between;gap:8px;align-items:baseline;margin-top:16px}.product__heading .price{font-size:22px}.product__desc{font-size:14px;line-height:1.55;color:var(--muted);margin-top:10px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.product__count{font-size:12px;color:var(--muted);margin-top:10px}.product__buy{display:block;font-size:12px;margin-top:8px}.how>h2{margin-bottom:24px}.use-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}.use-grid img{aspect-ratio:4/3;object-fit:cover}.use-grid h3{margin-top:20px;margin-bottom:10px;font-size:24px}.use-grid p{color:var(--muted)}.library-details{display:grid;grid-template-columns:7fr 5fr;gap:64px;align-items:center}.library-details img{background:var(--pale)}.detail-text h2{margin-bottom:24px}.detail-text>p+p{margin-top:18px}.detail-text>p:not(.intro){color:var(--muted)}.collection-caption{font-size:12px}.prompts{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:0}.prompt-scene{height:100%;min-height:490px;object-fit:cover}.prompts .detail-text{padding:48px clamp(32px,5vw,80px);max-width:690px}.sample{background:var(--pale);padding-block:48px}.sample__inner{display:flex;align-items:center;justify-content:space-between;gap:64px}.sample h2{margin-bottom:24px}.sample p:not(.intro){max-width:680px;color:var(--muted)}.sample .btn{flex-shrink:0}.footer{background:var(--navy);color:var(--paper);padding:40px 0 28px}.footer__row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px}.footer .wordmark{font-size:12px;letter-spacing:.23em}.footer__links{display:flex;flex-wrap:wrap;gap:8px 24px;font-size:12px}.footer__links a{display:block;padding-block:10px}.footer__fine{width:100%;font-size:12px;border-top:1px solid #fbf8f230;padding-top:24px;color:#d1d4dc}
+html.js img{transition:opacity 800ms cubic-bezier(.22,1,.36,1)}html.js img:not(.is-visible){opacity:0}html.show-all img{opacity:1"'!important;transition:none!important}
+@media(max-width:1000px){.wordmark{font-size:12px;letter-spacing:.23em}.nav{gap:24px}.library-details{gap:32px}.footer__row{justify-content:flex-start}}
+@media(max-width:900px){.products{grid-template-columns:repeat(2,minmax(0,1fr))}.library-details{grid-template-columns:1fr}.library-details figure{max-width:650px;width:100%;margin-inline:auto}.prompts .detail-text{padding:32px}.section-head{align-items:start}.shop-link{font-size:12px}.hero__panel{width:350px}.prompt-scene{min-height:550px}}
+@media(max-width:600px){html{scroll-padding-top:110px}.promotion{font-size:10px;line-height:1.7;padding:7px 16px}.promotion a{display:block;margin-left:0}.masthead__row{grid-template-columns:minmax(0,1fr) auto;min-height:65px;gap:12px}.shop-link,.buy-long{display:none}.buy-short{display:inline}.wordmark{font-size:10px;letter-spacing:.18em}.masthead__buy{font-size:12px}.nav{width:100%;padding-inline:20px;justify-content:flex-start;gap:25px;overflow-x:auto;scrollbar-width:thin}.nav li{flex-shrink:0}.nav a{padding-block:12px;font-size:12px}.hero{height:auto;min-height:0;overflow:hidden}.hero__photo{position:relative;height:70vh;height:70svh}.hero__photo img{object-position:center}.hero__panel{position:static;transform:none;width:auto;padding:32px 20px}.hero h1{max-width:320px}.hero__panel>p:not(.intro):not(.buy-note){font-size:15px}.section{margin-block:64px}.section-head{display:block;margin-bottom:24px}.section-head h2{max-width:300px}.shop-all{display:inline-block;margin-top:20px}.products{gap:30px 16px}.product__heading{gap:6px;margin-top:12px}.product h3{font-size:20px}.product__desc{font-size:14px}.product__count,.product__buy{font-size:11px}.product__heading .price{font-size:20px}.use-grid{grid-template-columns:1fr;gap:32px}.use-grid h3{margin-top:16px}.library-details{gap:28px}.prompts{grid-template-columns:1fr}.prompt-scene{min-height:0;height:auto;aspect-ratio:4/3}.prompts .detail-text{padding:32px 20px 0}.sample{padding-block:36px}.sample__inner{display:block}.sample .btn{margin-top:24px}.footer__row{display:block}.footer .wordmark{font-size:11px}.footer__links{margin-block:22px;gap:4px 20px}.footer__fine{padding-top:22px}}
+@media(prefers-reduced-motion:reduce){html.js img:not(.is-visible){opacity:1}html.js img{transition:none}.hero__photo img{transform:none!important}}
+CSS
+cat > main.js <<'"'JS'
+(() => {
+  'use strict';
+  const root = document.documentElement;
+  const images = [...document.images];
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  const hero = document.querySelector('.hero__photo img');
+  let observer;
+  let frame = 0;
+  let showAll = false;
+
+  function stop() {
+    observer?.disconnect();
+    cancelAnimationFrame(frame);
+    frame = 0;
+    removeEventListener('scroll', schedule);
+    removeEventListener('resize', schedule);
+    hero.style.removeProperty('transform');
+  }
+  window.__revealAll = () => {
+    showAll = true;
+    stop();
+    root.classList.add('show-all');
+    images.forEach(img => {
+      img.loading = 'eager';
+      img.classList.add('is-visible');
+    });
+  };
+  function paint() {
+    frame = 0;
+    const top = document.querySelector('.hero').getBoundingClientRect().top;
+    hero.style.transform = "'`translateY(${Math.min(40, Math.max(0, -top * 0.06))}px)`;
+  }
+  function schedule() {
+    if (!frame) frame = requestAnimationFrame(paint);
+  }
+  function configure() {
+    stop();
+    if (showAll || reduced.matches) {
+      images.forEach(img => img.classList.add('"'is-visible'));
+      return;
+    }
+    if ('IntersectionObserver' in window) {
+      observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.05 });
+      images.forEach(img => observer.observe(img));
+      root.classList.add('js');
+    }
+    addEventListener('scroll', schedule, { passive: true });
+    addEventListener('resize', schedule);
+    schedule();
+  }
+  reduced.addEventListener('change', configure);
+  configure();
+})();
+JS
+node -e \"console.log(require.resolve('/workspace/mps-tools-8df2/node_modules/playwright-core'))\"" in /workspace/midnight-pages-site
+ succeeded in 80ms:
+/workspace/mps-tools-8df2/node_modules/playwright-core/index.js
+
+exec
+/bin/bash -lc 'python3 -m http.server 8765' in /workspace/midnight-pages-site
+exec
+/bin/bash -lc "cat > /tmp/check-mps.cjs <<'JS'
+const {chromium}=require('/workspace/mps-tools-8df2/node_modules/playwright-core');
+(async()=>{const browser=await chromium.launch({executablePath:'/usr/bin/google-chrome',headless:true,args:['--no-sandbox']});for(const width of [390,1440]){const page=await browser.newPage({viewport:{width,height:900}});const errors=[];page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text())});await page.goto('http://localhost:8765',{waitUntil:'networkidle'});await page.evaluate(()=>window.__revealAll());await page.evaluate(()=>document.fonts.ready);await page.screenshot({path:"'`/tmp/mps-${width}.png`,fullPage:true});console.log(JSON.stringify({width,errors,...await page.evaluate(()=>({scrollWidth:document.documentElement.scrollWidth,innerWidth,overflow:[...document.querySelectorAll('"'body *')].filter(e=>e.getBoundingClientRect().right>innerWidth+1&&getComputedStyle(e).position"'!=='"'absolute'&&"'!e.closest('"'.nav')).map(e=>e.className),headings:[...document.querySelectorAll('h1,h2,h3')].map(e=>parseFloat(getComputedStyle(e).fontSize)),navScrollable:document.querySelector('.nav').scrollWidth>document.querySelector('.nav').clientWidth,brokenImages:[...document.images].filter(e=>"'!e.complete||!e.naturalWidth).map(e=>e.src)}))}));await page.close()}
+for(const opts of [{javaScriptEnabled:false},{reducedMotion:'"'reduce'}]){const page=await browser.newPage({viewport:{width:390,height:900},...opts});await page.goto('http://localhost:8765',{waitUntil:'networkidle'});console.log(JSON.stringify({opts,hidden:await page.locator('img').evaluateAll(xs=>xs.filter(x=>getComputedStyle(x).opacity==='0').length)}));await page.close()}await browser.close()})();
+JS
+node /tmp/check-mps.cjs" in /workspace/midnight-pages-site
+exec
+/bin/bash -lc "python3 - <<'PY'
+from bs4 import BeautifulSoup
+from pathlib import Path
+old=BeautifulSoup(Path('/tmp/mps-original.html').read_text(),'html.parser');new=BeautifulSoup(Path('index.html').read_text(),'html.parser')
+assert [str(x) for x in old.head.select('meta')]==[str(x) for x in new.head.select('meta')]
+oldlinks={a['href'] for a in old.select('a[href]') if 'gumroad' in a['href']};newlinks={a['href'] for a in new.select('a[href]') if 'gumroad' in a['href']};assert oldlinks==newlinks
+for sel in ['.set__desc','.set__count','.lede','.lede--small','.buy__note','.how__list p','.prompts__text > p','.sample__inner > p']:
+ for p in old.select(sel):
+  t=p.get_text(' ',strip=True)
+  assert t in new.get_text(' ',strip=True),t
+print('Original meta tags, all 12 unique Gumroad destinations, descriptions, counts and body paragraphs preserved.')
+PY" in /workspace/midnight-pages-site
+ succeeded in 0ms:
+Original meta tags, all 12 unique Gumroad destinations, descriptions, counts and body paragraphs preserved.
+
+ succeeded in 3920ms:
+{"width":390,"errors":[],"scrollWidth":390,"innerWidth":390,"overflow":[],"headings":[40,32,20,20,20,20,20,20,20,20,32,24,24,24,32,32,32],"navScrollable":true,"brokenImages":[]}
+{"width":1440,"errors":[],"scrollWidth":1440,"innerWidth":1440,"overflow":[],"headings":[40,32,20,20,20,20,20,20,20,20,32,24,24,24,32,32,32],"navScrollable":false,"brokenImages":[]}
+{"opts":{"javaScriptEnabled":false},"hidden":0}
+{"opts":{"reducedMotion":"reduce"},"hidden":0}
+
+codex
+The layout is rebuilt, and checks confirm the original meta tags, product descriptions, tag counts, body paragraphs and all Gumroad destinations are preserved. Chrome verification is running now, including no-JavaScript and reduced-motion checks.
+exec
+/bin/bash -lc 'sed -i "s/await page.evaluate(()=>document.fonts.ready);/await page.evaluate(()=>Promise.all([document.fonts.ready,...[...document.images].map(i=>i.decode())]));/" /tmp/check-mps.cjs
+node /tmp/check-mps.cjs' in /workspace/midnight-pages-site
+ succeeded in 4520ms:
+{"width":390,"errors":[],"scrollWidth":390,"innerWidth":390,"overflow":[],"headings":[40,32,20,20,20,20,20,20,20,20,32,24,24,24,32,32,32],"navScrollable":true,"brokenImages":[]}
+{"width":1440,"errors":[],"scrollWidth":1440,"innerWidth":1440,"overflow":[],"headings":[40,32,20,20,20,20,20,20,20,20,32,24,24,24,32,32,32],"navScrollable":false,"brokenImages":[]}
+{"opts":{"javaScriptEnabled":false},"hidden":0}
+{"opts":{"reducedMotion":"reduce"},"hidden":0}
+
+exec
+/bin/bash -lc 'git diff --stat && git status --short' in /workspace/midnight-pages-site
+ succeeded in 0ms:
+ index.html | 176 +++++-------------------------------------------------
+ main.js    | 198 +++++++++++++++++--------------------------------------------
+ styles.css |  21 +++----
+ 3 files changed, 79 insertions(+), 316 deletions(-)
+ M index.html
+ M main.js
+ M styles.css
+?? assets/scenes/tools/codex-v3.log
+?? assets/scenes/tools/codex-v3.md
+
+codex
+Rewrote all three files per DESIGN-v3.md, preserving meta tags, product copy, prices, tag counts and Gumroad destinations.
+
+Chrome checks passed at 390px and 1440px: no console errors, broken images or horizontal overflow. Mobile nav scrolls horizontally. No-JS and reduced-motion checks passed.
+
+No commit or push performed.
+2026-10-19T03:54:04.830191Z ERROR codex_core::session: failed to record rollout items: thread 01a15249-b859-7d92-a26c-90419dc58778 not found
+tokens used
+36,195
+Rewrote all three files per DESIGN-v3.md, preserving meta tags, product copy, prices, tag counts and Gumroad destinations.
+
+Chrome checks passed at 390px and 1440px: no console errors, broken images or horizontal overflow. Mobile nav scrolls horizontally. No-JS and reduced-motion checks passed.
+
+No commit or push performed.
