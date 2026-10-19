@@ -46,7 +46,7 @@ def head(title,desc,url,img,typ,r,extra):
   <nav aria-label="Primary"><ul class="b-nav">
    <li><a href="{r}#sets">Gift tags</a></li>
    <li><a href="{r}blog/" aria-current="{'page' if typ=='website' else 'false'}">Journal</a></li>
-   <li><a class="b-nav__buy" href="{L}">Library $39</a></li>
+   <li><a class="b-nav__buy" href="{L}">Library $15</a></li>
   </ul></nav>
  </div>
 </header>
@@ -74,7 +74,7 @@ for p in POSTS:
   url=f"{BASE}/blog/{p['slug']}/"; r="../../"; og=f"{BASE}/img/blog/og-{p['img']}.jpg"
   data={"@context":"https://schema.org","@type":"BlogPosting","headline":p["title"],"description":p["desc"],"image":[og],"datePublished":DATE,"dateModified":DATE,"author":ORG,"publisher":{**ORG,"logo":{"@type":"ImageObject","url":f"{BASE}/apple-touch-icon.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":url},"url":url,"inLanguage":"en-US","isPartOf":{"@type":"Blog","@id":f"{BASE}/blog/"}}
   crumbs={"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Journal","item":f"{BASE}/blog/"},{"@type":"ListItem","position":2,"name":p["title"],"item":url}]}
-  rel="".join(f'''<li><a href="{S[k]}"><picture><source type="image/webp" srcset="{r}img/{IMG[k]}-480.webp"><img src="{BASE}/img/{IMG[k]}-480.jpg" width="480" height="480" alt="{NAMES[k]} gift tag set" loading="lazy" decoding="async"></picture><span class="b-rel__name">{NAMES[k]}</span><span class="b-rel__price">$12 · Buy on Gumroad</span></a></li>''' for k in p["tags"])
+  rel="".join(f'''<li><a href="{S[k]}"><picture><source type="image/webp" srcset="{r}img/{IMG[k]}-480.webp"><img src="{BASE}/img/{IMG[k]}-480.jpg" width="480" height="480" alt="{NAMES[k]} gift tag set" loading="lazy" decoding="async"></picture><span class="b-rel__name">{NAMES[k]}</span><span class="b-rel__price">$3 · Buy on Gumroad</span></a></li>''' for k in p["tags"])
   body=f'''<main id="main" class="b-article">
  <header class="b-wrap b-art__head">
   <p class="b-crumb"><a href="../">Journal</a> <span aria-hidden="true">/</span> Pop-by guides</p>
@@ -86,7 +86,7 @@ for p in POSTS:
  <div class="b-wrap b-prose">{p["body"]}
   {sample(r)}
   <section class="b-rel" aria-labelledby="rel-h"><h2 id="rel-h">Tag sets for this season</h2><ul>{rel}</ul>
-  <div class="b-rel__all"><p>Or get all eight collections, 109 designs and The Home Letter 2027 in the Pop-By Tag Library.</p><a class="b-btn b-btn--ink" href="{L}">Buy the Library <span class="b-btn__price">$39</span></a><p class="b-save">Save $57 vs. buying all 8 sets separately ($96)</p></div></section>
+  <div class="b-rel__all"><p>Or get all eight collections, 109 designs and The Home Letter 2027 in the Pop-By Tag Library.</p><a class="b-btn b-btn--ink" href="{L}">Buy the Library <span class="b-btn__price">$15</span></a><p class="b-save">Save $9 vs. buying all 8 sets separately ($24)</p></div></section>
  </div>
 </main>
 '''

@@ -14,15 +14,15 @@
 
 ## 版式（从上到下）
 1. **促销条**（深蓝，12px，居中）："Instant download via Gumroad · Nothing ships; everything prints." 再加一个链接 "Get ten free prompts →"（free sample 的 Gumroad 链接）。
-2. **刊头**：三栏网格。左边 "Shop on Gumroad"（店铺链接），中间 wordmark "MIDNIGHT PAGES STUDIO"（Inter 500，15px，字距 .34em），右边 "Buy the Library — $39"（文字链接，带下划线，始终可见）。下面一排导航，以细线分隔：Thanksgiving pop-bys（砖红，锚点到 #library）· Gift tags · The Tag Library · Prompt Pack · Free sample。刊头吸顶，背景是纸色。手机：促销条、wordmark 加右侧 "Buy · $39"；导航变成可横向滑动的一行。
-3. **首屏（Thanksgiving）**：满版图片 assets/scenes/hero-thanksgiving.webp，高度 min(86vh, 760px)，object-fit cover，焦点在左边的派饼。文字压在图片右侧三分之一的柔焦桌面上，放在一块纸色面板里（不是卡片：纯色 #fbf8f2，无阴影，无圆角，padding 32px，宽约 380px）。面板内容依次是：小字 "The Pop-By Tag Library"；H1 衬线 40px "For the pie at *Thanksgiving*."；一句原文案 "Eight tag collections, 109 printable and editable designs, plus The Home Letter 2027: twelve monthly client newsletters, already written."；按钮 "Buy the Library $39"（深蓝底实心矩形）；小字 "Instant download via Gumroad. All eight sets bought separately cost $56."。
+2. **刊头**：三栏网格。左边 "Shop on Gumroad"（店铺链接），中间 wordmark "MIDNIGHT PAGES STUDIO"（Inter 500，15px，字距 .34em），右边 "Buy the Library — $15"（文字链接，带下划线，始终可见）。下面一排导航，以细线分隔：Thanksgiving pop-bys（砖红，锚点到 #library）· Gift tags · The Tag Library · Prompt Pack · Free sample。刊头吸顶，背景是纸色。手机：促销条、wordmark 加右侧 "Buy · $15"；导航变成可横向滑动的一行。
+3. **首屏（Thanksgiving）**：满版图片 assets/scenes/hero-thanksgiving.webp，高度 min(86vh, 760px)，object-fit cover，焦点在左边的派饼。文字压在图片右侧三分之一的柔焦桌面上，放在一块纸色面板里（不是卡片：纯色 #fbf8f2，无阴影，无圆角，padding 32px，宽约 380px）。面板内容依次是：小字 "The Pop-By Tag Library"；H1 衬线 40px "For the pie at *Thanksgiving*."；一句原文案 "Eight tag collections, 109 printable and editable designs, plus The Home Letter 2027: twelve monthly client newsletters, already written."；按钮 "Buy the Library $15"（深蓝底实心矩形）；小字 "Instant download via Gumroad. Save $9 vs. buying all 8 sets separately ($24)."。
    手机：图片用 hero-thanksgiving-mobile.webp，高 70vh，面板放在图片下方，不叠在图上。
 4. **Gift tag sets, $7 each**（标题 32px，左对齐，右边 "Shop all on Gumroad" 链接）：说明文字用现有的 section-head__note。8 个系列：电脑每行 4 个，手机每行 2 个。每格：方形产品图（img/*-480/800.webp，放在 #f3eee4 底上，无边框无阴影）→ 名称（衬线 20px）和右侧价格 $7 → 一行描述（14px，次要色，最多两行）→ 张数（12px）。整格是指向该系列 Gumroad 页面的链接。悬停时图片透明度 0.92，名称加下划线，不做位移。
 5. **How agents use them**（标题 32px）：三张场景图横排（手机竖排），比例 4:3。每张下面是小标题加原文：
    - Pop-bys → use-popby-porch.webp
    - Client touches → use-closing-keys.webp
    - Open houses → use-openhouse-cookies.webp
-6. **The Tag Library 详情**：左边 7 列，放现有的 library-800.webp（产品总览，放在 #f3eee4 底上，平放不倾斜）；右边 5 列：标题 "The Pop-By Tag Library"，两段原文（lede 和 lede--small），图注列出八个系列名，然后是按钮 $39 和价格说明。
+6. **The Tag Library 详情**：左边 7 列，放现有的 library-800.webp（产品总览，放在 #f3eee4 底上，平放不倾斜）；右边 5 列：标题 "The Pop-By Tag Library"，两段原文（lede 和 lede--small），图注列出八个系列名，然后是按钮 $15 和价格说明。
 7. **Prompt Pack**：满宽两栏，背景纸色，不用深蓝。左边是 prompt-desk.webp 场景图（Appointed 风桌面），右边是标题 "AI Listing & Marketing Prompt Pack"、两段原文、按钮 "Buy the Prompt Pack $24"。
 8. **Free sample**：一条浅色横带 #f3eee4，左边标题 "Ten prompts, on the house" 加原文，右边按钮 "Get the free sample"。
 9. **页脚**：深蓝，wordmark 加链接一行，加 "Digital downloads for US real estate agents. Nothing ships; everything prints."
