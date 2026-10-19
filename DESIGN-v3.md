@@ -34,3 +34,11 @@
 - 图片缓慢淡入：进入视口时 opacity 0→1，800ms，cubic-bezier(0.22,1,0.36,1)，只动 opacity，用 IntersectionObserver。理由：避免图片硬生生地蹦出来，保持安静。
 - 首屏大图极轻的视差：图片 translateY 最多 40px，跟随滚动，用 requestAnimationFrame，只改 transform。理由：给满版大图一点景深，但不抢注意力。
 - prefers-reduced-motion 时两者都关闭。不用 JS 时内容默认可见。
+
+## v4 修订（2026-10-19，老板：首屏要一眼看出房产）
+- 首屏场景：美国住宅门廊（海军蓝木门、黄铜门把/门牌、秋季菊花与南瓜），台阶上一只装苹果的牛皮纸袋，系真实 Curb Appeal「Thankful for clients like you」吊牌，旁边一串新房钥匙。文件 assets/scenes/v4-hero-porch.webp（2560×1440）/ v4-hero-porch-mobile.webp（竖裁）。
+- 首屏标题改为现有文案中的「For the bag of apples on a past client’s porch.」（取自 The Pop-By Tag Library 段落原句，未新编）。
+- 用法三张：Pop-bys 保留门廊苹果袋；Client touches 换为交房钥匙+蜡烛（竖放「Welcome home」吊牌，孔位上方留白不压字）；Open houses 换为样板房厨房岛台饼干罐。
+- 手机首屏：图片约 44svh，图下紧接标题与购买按钮，按钮在 390×844 首屏内可见；说明文字放到按钮之后。
+- 清晰度：AI 底图 1280×720 → Real-ESRGAN x4plus（ncnn-vulkan + Mesa lavapipe CPU，本地免费）手动分块放大到 2560×1440，再在高分辨率底图上贴吊牌（吊牌原图不经 AI 放大，避免文字被"脑补"）。
+- 吊牌比例：场景里空白吊牌比原图更细长，采用"纵向最多拉伸 18% + 用吊牌底色向上/下延展"的方式适配，不压缩插画、不让打孔压到文字。
