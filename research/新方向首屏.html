@@ -1,0 +1,35 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+@font-face{font-family:IS;src:url(../fonts/InstrumentSerif-Regular.woff)}@font-face{font-family:IS;font-style:italic;src:url(../fonts/InstrumentSerif-Italic.woff)}
+@font-face{font-family:Inter;src:url(../fonts/Inter-Regular.woff)}@font-face{font-family:Inter;font-weight:500;src:url(../fonts/Inter-Medium.woff)}
+*{box-sizing:border-box;margin:0;padding:0}body{font:400 14px/1.5 Inter,sans-serif;color:#14213a;background:#fbf8f2}
+.bar{background:#14213a;color:#efe8da;text-align:center;font-size:12px;letter-spacing:.04em;padding:9px}
+.bar a{color:inherit}
+header{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:18px 40px 10px}
+.wm{font:500 15px/1 Inter;letter-spacing:.34em;text-align:center}
+.r{justify-self:end;display:flex;gap:22px;font-size:13px}.l{font-size:13px;color:#4a5266}
+nav{display:flex;justify-content:center;gap:30px;font-size:13px;padding:10px 0 14px;border-bottom:1px solid #e3dccd}
+nav a:first-child{color:#a4472b}
+.hero{position:relative;height:600px;overflow:hidden}
+.hero img{width:100%;height:100%;object-fit:cover;object-position:0% 78%}
+.cap{position:absolute;right:56px;bottom:56px;color:#fff;max-width:440px;text-shadow:0 1px 20px rgba(0,0,0,.25)}
+.cap p{font-size:11px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:12px}
+.cap h1{font:400 46px/1.05 IS;margin-bottom:20px}.cap h1 em{font-style:italic}
+.btn{display:inline-block;background:#fbf8f2;color:#14213a;padding:13px 22px;font-size:13px;font-weight:500;text-decoration:none}
+.shop{padding:34px 40px}.shop h2{font:italic 400 28px IS;margin-bottom:18px;display:flex;justify-content:space-between;align-items:baseline}
+.shop h2 span{font:500 12px Inter;text-decoration:underline}
+.row{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.row div{background:#efe9dd}.row img{width:100%;display:block}
+.row b{display:block;font-weight:500;font-size:13px;margin-top:8px}.row i{font-style:normal;color:#4a5266;font-size:13px}
+.note{position:absolute;right:12px;top:12px;background:#a4472b;color:#fff;font-size:11px;padding:4px 8px}
+@media(max-width:600px){header{padding:14px 18px}.l{display:none}nav{justify-content:flex-start;overflow:auto;gap:20px;padding:10px 18px}.hero{height:520px}.cap{left:20px;bottom:28px;right:20px}.hero img{object-position:8% 80%}.cap h1{font-size:36px}.shop{padding:24px 18px}.row{grid-template-columns:repeat(2,1fr)}}
+</style></head><body>
+<div class="bar">Instant download via Gumroad · Nothing ships; everything prints. &nbsp;<a href="#">Get ten free prompts</a></div>
+<header><div class="l">Search</div><div class="wm">MIDNIGHT PAGES STUDIO</div><div class="r"><span>Gumroad shop</span></div></header>
+<nav><a>Thanksgiving pop-bys</a><a>Gift tags</a><a>The Tag Library</a><a>Prompt Pack</a><a>Free sample</a></nav>
+<section class="hero"><img src="场景合成-派饼.jpg" alt=""><span class="note">示意：真实场景图</span>
+<div class="cap"><p>The Pop-By Tag Library · $39</p><h1>For the pie at <em>Thanksgiving.</em></h1><a class="btn">Buy the Library</a></div></section>
+<section class="shop"><h2>Gift tag sets, $7 each <span>Shop all eight</span></h2><div class="row">
+<div><img src="../img/curb-appeal-480.webp"></div><div><img src="../img/fair-isle-480.webp"></div><div><img src="../img/herbarium-480.webp"></div><div><img src="../img/gilded-hush-480.webp"></div><div><img src="../img/postmark-480.webp"></div></div>
+<div class="row" style="margin-top:0"><p><b>Curb Appeal</b><i>$7</i></p><p><b>Fair Isle</b><i>$7</i></p><p><b>Herbarium</b><i>$7</i></p><p><b>Gilded Hush</b><i>$7</i></p><p><b>Postmark</b><i>$7</i></p></div></section>
+</body></html>
