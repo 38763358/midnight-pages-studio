@@ -38,6 +38,11 @@ def oriented_quad(filled):
     return Q
 def run(cfg):
     bg=Image.open(cfg['scene']).convert('RGB');a=np.array(bg)
+    if cfg.get('disp'):
+        k=bg.size[0]/1024.0
+        for key in ('quad','mask_poly'):
+            if key in cfg: cfg[key]=[[x*k,y*k] for x,y in cfg[key]]
+        cfg['disp']=False
     if 'quad' in cfg:
         H0,W0=a.shape[:2];pm=Image.new('L',(W0,H0),0);ImageDraw.Draw(pm).polygon([tuple(p) for p in cfg['quad']],fill=255)
         poly=np.array(pm)>0;polyd=nd.binary_dilation(poly,iterations=cfg.get('pad',4))
@@ -54,6 +59,15 @@ def run(cfg):
     if cfg.get('portrait_fix') is not None:
         pass
     art=load_art(cfg['art'],cfg['box'],cfg.get('hole'),cfg.get('rot',0))
+    if cfg.get('pad_top'):
+        arr=np.array(art);col=np.median(arr[4:14].reshape(-1,3),0).astype('uint8');n=int(arr.shape[0]*cfg['pad_top'])
+        art=Image.fromarray(np.concatenate([np.tile(col,(n,arr.shape[1],1)),arr],0))
+    if cfg.get('pad_bottom'):
+        qw=(np.linalg.norm(Q[1]-Q[0])+np.linalg.norm(Q[2]-Q[3]))/2;qh=(np.linalg.norm(Q[3]-Q[0])+np.linalg.norm(Q[2]-Q[1]))/2
+        aw,ah=art.size;nh=int(aw*qh/qw)
+        if nh>ah:
+            arr=np.array(art);col=np.median(arr[-12:-4].reshape(-1,3),0).astype('uint8')
+            pad=np.tile(col,(nh-ah,aw,1));art=Image.fromarray(np.concatenate([arr[:-4],pad,arr[-4:]],0))
     W,H=bg.size;w,h=art.size
     # inset quad slightly so art bleeds to edge
     c=Q.mean(0);Q=c+(Q-c)*cfg.get('scale',1.02)
