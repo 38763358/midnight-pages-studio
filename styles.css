@@ -12,3 +12,4 @@ html.js img{transition:opacity 800ms cubic-bezier(.22,1,.36,1)}html.js img:not(.
 .buy-save{font-size:12px;color:var(--muted);margin-top:14px;line-height:1.5}.buy-save+.buy-note{margin-top:4px}
 .footer__contact{width:100%;font-size:12px;margin:0;color:#d1d4dc}.footer__contact a{text-decoration:underline}
 @media(max-width:600px){.buy-save{order:3}.footer__contact{margin-top:16px}}
+.hero__panel>p.buy-save{font-size:12px;margin-top:14px;line-height:1.5}.hero .buy-save{order:3}
