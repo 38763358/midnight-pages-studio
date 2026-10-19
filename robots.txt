@@ -1,4 +1,4 @@
-# Preview: only the blog is open to crawlers. The homepage stays noindex until approved.
+# Preview: only the blog is open to crawlers. The homepage is kept out of search until approved.
 User-agent: *
 Allow: /midnight-pages-studio/blog/
 Allow: /midnight-pages-studio/img/
