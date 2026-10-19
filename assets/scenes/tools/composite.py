@@ -59,6 +59,8 @@ def run(cfg):
     if cfg.get('portrait_fix') is not None:
         pass
     art=load_art(cfg['art'],cfg['box'],cfg.get('hole'),cfg.get('rot',0))
+    if cfg.get('stretch'):
+        art=art.resize((art.width,int(art.height*cfg['stretch'])),Image.LANCZOS)
     if cfg.get('pad_top'):
         arr=np.array(art);col=np.median(arr[4:14].reshape(-1,3),0).astype('uint8');n=int(arr.shape[0]*cfg['pad_top'])
         art=Image.fromarray(np.concatenate([np.tile(col,(n,arr.shape[1],1)),arr],0))

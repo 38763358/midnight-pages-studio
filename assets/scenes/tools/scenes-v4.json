@@ -35,7 +35,8 @@
   "pad_bottom": true,
   "out": "prev-v4-hero.jpg",
   "blur": 0.6,
-  "pad_top": 0.1
+  "pad_top": 0.08,
+  "stretch": 1.18
  },
  {
   "scene": "raw/v4-keys.jpg",
