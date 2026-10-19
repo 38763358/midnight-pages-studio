@@ -100,15 +100,10 @@ write(f"{ROOT}/blog/index.html",head("Pop-By Ideas and Client Touch Guides for R
  <div class="b-wrap b-list__sample">{sample("../")}</div>
 </main>
 '''+foot("../"))
-urls=[f"{BASE}/blog/"]+[f"{BASE}/blog/{p['slug']}/" for p in POSTS]
+urls=[f"{BASE}/",f"{BASE}/blog/"]+[f"{BASE}/blog/{p['slug']}/" for p in POSTS]
 write(f"{ROOT}/sitemap.xml",'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+"".join(f"  <url><loc>{u}</loc><lastmod>{DATE}</lastmod></url>\n" for u in urls)+"</urlset>\n")
-write(f"{ROOT}/robots.txt",f"""# Preview: only the blog is open to crawlers. The homepage is kept out of search until approved.
-User-agent: *
-Allow: /midnight-pages-studio/blog/
-Allow: /midnight-pages-studio/img/
-Allow: /midnight-pages-studio/fonts/
-Allow: /midnight-pages-studio/blog.css
-Disallow: /midnight-pages-studio/
+write(f"{ROOT}/robots.txt",f"""User-agent: *
+Allow: /
 
 Sitemap: {BASE}/sitemap.xml
 """)
