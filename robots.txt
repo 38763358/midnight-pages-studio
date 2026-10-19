@@ -1,0 +1,9 @@
+# Preview: only the blog is open to crawlers. The homepage stays noindex until approved.
+User-agent: *
+Allow: /midnight-pages-studio/blog/
+Allow: /midnight-pages-studio/img/
+Allow: /midnight-pages-studio/fonts/
+Allow: /midnight-pages-studio/blog.css
+Disallow: /midnight-pages-studio/
+
+Sitemap: https://38763358.github.io/midnight-pages-studio/sitemap.xml
