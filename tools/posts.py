@@ -121,20 +121,20 @@ body=f"""
 <p>Pick a pace you can keep. Four pop-bys a year that actually happen beat twelve that don&rsquo;t.</p>
 
 <h2>Month by month</h2>
-<dl class="cal">
-<dt>January</dt><dd>New Year pop-by or note: &ldquo;Cheers to 2027.&rdquo; Newsletter: setting home goals for the year, a winter maintenance checklist.</dd>
-<dt>February</dt><dd>Newsletter: a small Valentine&rsquo;s note to clients, an indoor project idea. Good month to send home anniversary cards you missed.</dd>
-<dt>March</dt><dd>Newsletter: spring cleaning and the change to daylight saving time (March 14, 2027), a reminder to test smoke detectors.</dd>
-<dt>April</dt><dd>Spring pop-by: seed packets, a small plant, or flower bulbs with an anytime tag. Newsletter: yard and exterior prep.</dd>
-<dt>May</dt><dd>Newsletter: garden and outdoor season, a local farmers market list. Pop-by option: a small potted herb.</dd>
-<dt>June</dt><dd>Newsletter: summer home checklist, AC filters, a note for anyone moving this summer.</dd>
-<dt>July</dt><dd>Summer pop-by around the Fourth: popsicles, a flag, or a lemonade mix with an anytime tag. Newsletter: summer events in your area.</dd>
-<dt>August</dt><dd>Newsletter: back-to-school routines, getting the house ready for fall.</dd>
-<dt>September</dt><dd>Newsletter: fall maintenance, gutters and heating check. Start planning your fall pop-bys.</dd>
-<dt>October</dt><dd>Fall pop-by: a small pumpkin or caramel apples. Newsletter: Halloween safety, end-of-year planning.</dd>
-<dt>November</dt><dd>Thanksgiving pop-by the week before the holiday (Thursday, November 25, 2027). Newsletter: gratitude and hosting tips. See <a href="../thanksgiving-pop-by-ideas-for-realtors/">Thanksgiving pop-by ideas</a>.</dd>
-<dt>December</dt><dd>Holiday pop-by in the first two weeks. Newsletter: holiday events, a year-end thank-you. See <a href="../holiday-pop-by-ideas-for-realtors/">December pop-by ideas</a>.</dd>
-</dl>
+<ul class="cal">
+<li><strong class="cal__m">January</strong><span class="cal__sep">: </span><span class="cal__t">New Year pop-by or note: &ldquo;Cheers to 2027.&rdquo; Newsletter: setting home goals for the year, a winter maintenance checklist.</span></li>
+<li><strong class="cal__m">February</strong><span class="cal__sep">: </span><span class="cal__t">Newsletter: a small Valentine&rsquo;s note to clients, an indoor project idea. Good month to send home anniversary cards you missed.</span></li>
+<li><strong class="cal__m">March</strong><span class="cal__sep">: </span><span class="cal__t">Newsletter: spring cleaning and the change to daylight saving time (March 14, 2027), a reminder to test smoke detectors.</span></li>
+<li><strong class="cal__m">April</strong><span class="cal__sep">: </span><span class="cal__t">Spring pop-by: seed packets, a small plant, or flower bulbs with an anytime tag. Newsletter: yard and exterior prep.</span></li>
+<li><strong class="cal__m">May</strong><span class="cal__sep">: </span><span class="cal__t">Newsletter: garden and outdoor season, a local farmers market list. Pop-by option: a small potted herb.</span></li>
+<li><strong class="cal__m">June</strong><span class="cal__sep">: </span><span class="cal__t">Newsletter: summer home checklist, AC filters, a note for anyone moving this summer.</span></li>
+<li><strong class="cal__m">July</strong><span class="cal__sep">: </span><span class="cal__t">Summer pop-by around the Fourth: popsicles, a flag, or a lemonade mix with an anytime tag. Newsletter: summer events in your area.</span></li>
+<li><strong class="cal__m">August</strong><span class="cal__sep">: </span><span class="cal__t">Newsletter: back-to-school routines, getting the house ready for fall.</span></li>
+<li><strong class="cal__m">September</strong><span class="cal__sep">: </span><span class="cal__t">Newsletter: fall maintenance, gutters and heating check. Start planning your fall pop-bys.</span></li>
+<li><strong class="cal__m">October</strong><span class="cal__sep">: </span><span class="cal__t">Fall pop-by: a small pumpkin or caramel apples. Newsletter: Halloween safety, end-of-year planning.</span></li>
+<li><strong class="cal__m">November</strong><span class="cal__sep">: </span><span class="cal__t">Thanksgiving pop-by the week before the holiday (Thursday, November 25, 2027). Newsletter: gratitude and hosting tips. See <a href="../thanksgiving-pop-by-ideas-for-realtors/">Thanksgiving pop-by ideas</a>.</span></li>
+<li><strong class="cal__m">December</strong><span class="cal__sep">: </span><span class="cal__t">Holiday pop-by in the first two weeks. Newsletter: holiday events, a year-end thank-you. See <a href="../holiday-pop-by-ideas-for-realtors/">December pop-by ideas</a>.</span></li>
+</ul>
 
 <h2>What goes in a client newsletter</h2>
 <p>A good client newsletter is useful first and about you second. A simple structure:</p>

@@ -53,7 +53,7 @@ def head(title,desc,url,img,typ,r,extra):
 '''
 def sample(r):
   return f'''<aside class="b-sample" aria-labelledby="sample-h">
- <div class="b-sample__img"><img src="{r}img/free-sample-480.webp" width="480" height="270" alt="Cover of the free sample: 10 AI prompts for real estate agents" loading="lazy" decoding="async"></div>
+ <div class="b-sample__img"><picture><source type="image/webp" srcset="{r}img/free-sample-480.webp"><img src="{BASE}/img/free-sample-480.jpg" width="480" height="270" alt="Cover of the free sample: 10 AI prompts for real estate agents" loading="lazy" decoding="async"></picture></div>
  <div><p class="b-eyebrow">Free</p><h2 id="sample-h" class="b-sample__h">Ten prompts, <em>on the house</em></h2>
  <p>A free sample of ten AI prompts for listing and follow-up writing. Enter your email on Gumroad and it&rsquo;s yours.</p>
  <a class="b-btn" href="{FREE}">Get the free sample</a></div>
@@ -74,7 +74,7 @@ for p in POSTS:
   url=f"{BASE}/blog/{p['slug']}/"; r="../../"; og=f"{BASE}/img/blog/og-{p['img']}.jpg"
   data={"@context":"https://schema.org","@type":"BlogPosting","headline":p["title"],"description":p["desc"],"image":[og],"datePublished":DATE,"dateModified":DATE,"author":ORG,"publisher":{**ORG,"logo":{"@type":"ImageObject","url":f"{BASE}/apple-touch-icon.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":url},"url":url,"inLanguage":"en-US","isPartOf":{"@type":"Blog","@id":f"{BASE}/blog/"}}
   crumbs={"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Journal","item":f"{BASE}/blog/"},{"@type":"ListItem","position":2,"name":p["title"],"item":url}]}
-  rel="".join(f'''<li><a href="{S[k]}"><img src="{r}img/{IMG[k]}-480.webp" width="480" height="480" alt="{NAMES[k]} gift tag set" loading="lazy" decoding="async"><span class="b-rel__name">{NAMES[k]}</span><span class="b-rel__price">$12 · Buy on Gumroad</span></a></li>''' for k in p["tags"])
+  rel="".join(f'''<li><a href="{S[k]}"><picture><source type="image/webp" srcset="{r}img/{IMG[k]}-480.webp"><img src="{BASE}/img/{IMG[k]}-480.jpg" width="480" height="480" alt="{NAMES[k]} gift tag set" loading="lazy" decoding="async"></picture><span class="b-rel__name">{NAMES[k]}</span><span class="b-rel__price">$12 · Buy on Gumroad</span></a></li>''' for k in p["tags"])
   body=f'''<main id="main" class="b-article">
  <header class="b-wrap b-art__head">
   <p class="b-crumb"><a href="../">Journal</a> <span aria-hidden="true">/</span> Pop-by guides</p>
@@ -82,7 +82,7 @@ for p in POSTS:
   <p class="b-dek">{p["dek"]}</p>
   <p class="b-byline">Midnight Pages Studio · <time datetime="{DATE}">{DATE_H}</time></p>
  </header>
- <figure class="b-wrap b-hero"><img src="{r}img/blog/{p['img']}-1280.webp" srcset="{r}img/blog/{p['img']}-800.webp 800w, {r}img/blog/{p['img']}-1280.webp 1280w" sizes="(min-width: 72rem) 68rem, 100vw" width="1280" height="720" alt="Printable pop-by gift tags from Midnight Pages Studio" fetchpriority="high"></figure>
+ <figure class="b-wrap b-hero"><picture><source type="image/webp" srcset="{r}img/blog/{p['img']}-800.webp 800w, {r}img/blog/{p['img']}-1280.webp 1280w" sizes="(min-width: 72rem) 68rem, 100vw"><img src="{BASE}/img/blog/{p['img']}-1280.jpg" srcset="{BASE}/img/blog/{p['img']}-800.jpg 800w, {BASE}/img/blog/{p['img']}-1280.jpg 1280w" sizes="(min-width: 72rem) 68rem, 100vw" width="1280" height="720" alt="Printable pop-by gift tags from Midnight Pages Studio" fetchpriority="high"></picture></figure>
  <div class="b-wrap b-prose">{p["body"]}
   {sample(r)}
   <section class="b-rel" aria-labelledby="rel-h"><h2 id="rel-h">Tag sets for this season</h2><ul>{rel}</ul>
@@ -91,7 +91,7 @@ for p in POSTS:
 </main>
 '''
   write(f"{ROOT}/blog/{p['slug']}/index.html",head(p["seo"]+" · Midnight Pages Studio",p["desc"],url,og,"article",r,ld(data)+"\n"+ld(crumbs))+body+foot(r))
-  cards+=f'''<li class="b-card"><a href="{p['slug']}/"><img src="../img/blog/{p['img']}-800.webp" width="800" height="450" alt="" loading="lazy" decoding="async"><span class="b-card__date"><time datetime="{DATE}">{DATE_H}</time></span><h2 class="b-card__h">{p["title"]}</h2><p>{p["desc"]}</p><span class="b-card__more">Read the guide <span aria-hidden="true">&rarr;</span></span></a></li>'''
+  cards+=f'''<li class="b-card"><a href="{p['slug']}/"><picture><source type="image/webp" srcset="../img/blog/{p['img']}-800.webp"><img src="{BASE}/img/blog/{p['img']}-800.jpg" width="800" height="450" alt="" loading="lazy" decoding="async"></picture><span class="b-card__date"><time datetime="{DATE}">{DATE_H}</time></span><h2 class="b-card__h">{p["title"]}</h2><p>{p["desc"]}</p><span class="b-card__more">Read the guide <span aria-hidden="true">&rarr;</span></span></a></li>'''
 url=f"{BASE}/blog/"; desc="Practical guides for US real estate agents: pop-by gift ideas, tag wording, and a year-round client touch calendar."
 blog={"@context":"https://schema.org","@type":"Blog","@id":url,"url":url,"name":"The Journal · Midnight Pages Studio","description":desc,"inLanguage":"en-US","publisher":ORG,"blogPost":[{"@type":"BlogPosting","headline":p["title"],"url":f"{BASE}/blog/{p['slug']}/","datePublished":DATE,"image":f"{BASE}/img/blog/og-{p['img']}.jpg","author":ORG} for p in POSTS]}
 write(f"{ROOT}/blog/index.html",head("Pop-By Ideas and Client Touch Guides for Realtors · Midnight Pages Studio Journal",desc,url,f"{BASE}/img/blog/og-calendar.jpg","website","../",ld(blog))+f'''<main id="main">

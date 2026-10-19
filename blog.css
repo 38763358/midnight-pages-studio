@@ -62,10 +62,14 @@ h1,h2,h3,p,figure,ul,ol,dl,dd{margin:0}
 .b-prose ol li::marker{font-family:var(--b-serif);font-style:italic;font-size:1.1em}
 .b-prose strong{font-weight:500}
 .b-prose a{color:var(--b-accent)}
-.cal{display:grid;grid-template-columns:7.5rem 1fr;border-top:1px solid var(--b-rule)}
-.cal dt{font:italic 400 1.35rem/1.4 var(--b-serif);padding:.9rem 0;border-bottom:1px solid var(--b-rule)}
-.cal dd{padding:1rem 0;border-bottom:1px solid var(--b-rule);font-size:.97rem}
-@media(max-width:34rem){.cal{grid-template-columns:1fr}.cal dt{border-bottom:0;padding-bottom:0}}
+picture{display:block}
+.b-prose>ul.cal{list-style:none;padding-left:0;display:block;border-top:1px solid var(--b-rule)}
+.b-prose .cal li{display:grid;grid-template-columns:7.5rem 1fr;margin:0;padding:0;border-bottom:1px solid var(--b-rule)}
+.b-prose .cal li::marker{content:none}
+.cal__m{font:italic 400 1.35rem/1.4 var(--b-serif)!important;padding:.9rem 0}
+.cal__sep{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.cal__t{padding:1rem 0;font-size:.97rem}
+@media(max-width:34rem){.b-prose .cal li{grid-template-columns:1fr}.cal__m{padding-bottom:0}}
 
 .b-sample{display:grid;gap:1.75rem;align-items:center;background:var(--b-ink);color:var(--b-paper);padding:clamp(1.75rem,4vw,2.75rem);margin-top:3.5rem}
 @media(min-width:40rem){.b-sample{grid-template-columns:minmax(0,.9fr) 1.1fr}}
