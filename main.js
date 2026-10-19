@@ -53,7 +53,7 @@ function select(index, manual = true) {
   const row = rows[current];
   info.replaceChildren(...['.set__name', '.set__desc', '.set__count'].map(s => row.querySelector(s).cloneNode(true)));
   const buy = document.createElement('a'); buy.href = row.querySelector('a').href;
-  buy.textContent = row.querySelector('.set__cta').textContent + ' · $7'; info.append(buy);
+  buy.textContent = row.querySelector('.set__cta').textContent + ' · $12'; info.append(buy);
 }
 select(0, false);
 document.querySelector('.deck-prev').onclick = () => select(current - 1);

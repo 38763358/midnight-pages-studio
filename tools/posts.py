@@ -38,7 +38,7 @@ body=f"""
 <p>Add your name, phone number and email in small type at the bottom. That&rsquo;s it. Skip the sales pitch; a pop-by is a thank-you, not an ad.</p>
 
 <h2>Match the tag to the gift</h2>
-<p>A tag that matches the gift looks considered rather than last-minute. If you&rsquo;re handing out baked goods, {a("gingham-kitchen","Gingham Kitchen")} has checked picnic prints and homey icons made for anything from the kitchen. Jams, honey and fruit pair well with the botanical drawings in {a("herbarium-market","Herbarium Market")}. For past clients you helped buy a home, {a("curb-appeal","Curb Appeal")} has hand-drawn houses and fall and housewarming tags. Each set is $7, printable and editable: type your name once and print at home or at a print shop.</p>
+<p>A tag that matches the gift looks considered rather than last-minute. If you&rsquo;re handing out baked goods, {a("gingham-kitchen","Gingham Kitchen")} has checked picnic prints and homey icons made for anything from the kitchen. Jams, honey and fruit pair well with the botanical drawings in {a("herbarium-market","Herbarium Market")}. For past clients you helped buy a home, {a("curb-appeal","Curb Appeal")} has hand-drawn houses and fall and housewarming tags. Each set is $12, printable and editable: type your name once and print at home or at a print shop.</p>
 <p>If you want variety for different clients, the <a href="{L}">Pop-By Tag Library</a> ($39) includes all eight collections, 109 designs, plus twelve monthly client newsletters for 2027.</p>
 
 <h2>Make the route manageable</h2>
@@ -88,7 +88,7 @@ body=f"""
 <p>The referral line is lighthearted; use it for clients who&rsquo;ll take it that way. For everyone else, a simple thank-you is enough.</p>
 
 <h2>Choosing a look</h2>
-<p>Your tag is the first thing a client sees, so pick a style that matches you and the gift. {a("fair-isle-lodge","Fair Isle Lodge")} has knitted patterns in cranberry and pine, cozy from November through January. {a("gilded-hush","Gilded Hush")} uses ivory, navy and oxblood with fine gold details, a good fit for a luxury client list. {a("postmark-society","Postmark Society")} has bold sunburst stamps that feel like mail worth opening. Every set includes holiday, New Year and anytime tags, so one set covers December and the first week of January. $7 each, printable and editable.</p>
+<p>Your tag is the first thing a client sees, so pick a style that matches you and the gift. {a("fair-isle-lodge","Fair Isle Lodge")} has knitted patterns in cranberry and pine, cozy from November through January. {a("gilded-hush","Gilded Hush")} uses ivory, navy and oxblood with fine gold details, a good fit for a luxury client list. {a("postmark-society","Postmark Society")} has bold sunburst stamps that feel like mail worth opening. Every set includes holiday, New Year and anytime tags, so one set covers December and the first week of January. $12 each, printable and editable.</p>
 <p>Planning gifts for more than one season? The <a href="{L}">Pop-By Tag Library</a> ($39) bundles all eight collections, 109 designs, and The Home Letter 2027: twelve monthly client newsletters, already written.</p>
 
 <h2>Keep December manageable</h2>
@@ -148,7 +148,7 @@ body=f"""
 <p>If writing twelve of these sounds like a lot, The Home Letter 2027 is twelve monthly client newsletters already written in that structure, with a market snapshot you fill in from your own MLS data. It comes with the <a href="{L}">Pop-By Tag Library</a> ($39), along with all eight tag collections and 109 printable, editable designs.</p>
 
 <h2>Tags for the whole year</h2>
-<p>Every tag set includes Thanksgiving, holiday, New Year and anytime designs, and the anytime tags cover spring and summer pop-bys. {a("chalk-talk","Chalk Talk")} is easygoing chalkboard lettering, good for neighbors and past clients alike. {a("riso-papercut","Riso Papercut")} is cut-paper shapes in bright print-shop color, a good fit for summer. {a("curb-appeal","Curb Appeal")} has hand-drawn houses, made for home anniversaries and housewarmings. $7 a set.</p>
+<p>Every tag set includes Thanksgiving, holiday, New Year and anytime designs, and the anytime tags cover spring and summer pop-bys. {a("chalk-talk","Chalk Talk")} is easygoing chalkboard lettering, good for neighbors and past clients alike. {a("riso-papercut","Riso Papercut")} is cut-paper shapes in bright print-shop color, a good fit for summer. {a("curb-appeal","Curb Appeal")} has hand-drawn houses, made for home anniversaries and housewarmings. $12 a set.</p>
 
 <h2>Set it up in an afternoon</h2>
 <ol>
