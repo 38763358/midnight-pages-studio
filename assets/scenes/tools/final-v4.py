@@ -11,7 +11,7 @@ json.dump(out,open('/tmp/mps_final.json','w'))
 subprocess.run([sys.executable,'tools/composite.py','/tmp/mps_final.json'],check=True)
 for s in out:
     n=s['out'][6:-4];im=Image.open(s['out']).convert('RGB')
-    im.save(n+'.webp',quality=84,method=6);im.resize((1280,720),Image.LANCZOS).save(n+'-1280.webp',quality=84)
+    im.save(n+'.webp',quality=82,method=6);im.resize((1280,720),Image.LANCZOS).save(n+'-1280.webp',quality=82)
     if n=='v4-hero-porch':
-        W,H=im.size;cw=int(H*0.75);x0=int(400/1024*W)-cw//2;im.crop((x0,0,x0+cw,H)).resize((810,1080),Image.LANCZOS).save('v4-hero-porch-mobile.webp',quality=84)
+        W,H=im.size;cw=int(H*0.75);x0=int(400/1024*W)-cw//2;im.crop((x0,0,x0+cw,H)).resize((810,1080),Image.LANCZOS).save('v4-hero-porch-mobile.webp',quality=82)
     os.remove(s['out']);print(n,im.size)
