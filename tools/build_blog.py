@@ -86,7 +86,7 @@ for p in POSTS:
  <div class="b-wrap b-prose">{p["body"]}
   {sample(r)}
   <section class="b-rel" aria-labelledby="rel-h"><h2 id="rel-h">Tag sets for this season</h2><ul>{rel}</ul>
-  <div class="b-rel__all"><p>Or get all eight collections, 109 designs and The Home Letter 2027 in the Pop-By Tag Library.</p><a class="b-btn b-btn--ink" href="{L}">Buy the Library <span class="b-btn__price">$15</span></a><p class="b-save">Save $9 vs. buying all 8 sets separately ($24)</p></div></section>
+  <div class="b-rel__all"><p>Or get all eight collections, six seasonal cards, 115 designs and The Home Letter 2027 in the Pop-By Tag Library.</p><a class="b-btn b-btn--ink" href="{L}">Buy the Library <span class="b-btn__price">$15</span></a><p class="b-save">Save $9 vs. buying all 8 sets separately ($24)</p></div></section>
  </div>
 </main>
 '''
