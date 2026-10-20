@@ -2,6 +2,19 @@ __pycache__/
 screens/
 assets/scenes/tools/esrgan/
 
-# 内部资料，已移至 /workspace/midnight-pages-private/，勿再提交
 research/
 assets/scenes/tools/
+DESIGN.md
+DESIGN-v3.md
+TODO-merge-to-main.md
+shoot.sh
+tools/
+screenshots/
+assets/scenes/raw/
+assets/scenes/prev-v4-*
+assets/scenes/hero-thanksgiving*
+assets/scenes/prompt-desk.jpg
+assets/scenes/use-closing-keys.*
+assets/scenes/use-openhouse-cookies.*
+assets/scenes/use-popby-porch.jpg
+assets/scenes/up/
