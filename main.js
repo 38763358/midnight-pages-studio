@@ -1,20 +1,3 @@
-// Pass utm_* query parameters from the landing URL through to Gumroad links (for attribution).
-(() => {
-  'use strict';
-  try {
-    const keys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
-    const incoming = new URLSearchParams(location.search);
-    const utm = keys.filter(k => incoming.get(k)).map(k => [k, incoming.get(k).slice(0, 100)]);
-    if (!utm.length) return;
-    document.querySelectorAll('a[href]').forEach(a => {
-      let url;
-      try { url = new URL(a.getAttribute('href'), location.href); } catch (e) { return; }
-      if (url.protocol !== 'https:' || !/(^|\.)gumroad\.com$/.test(url.hostname)) return;
-      utm.forEach(([k, v]) => { if (!url.searchParams.has(k)) url.searchParams.set(k, v); });
-      a.href = url.toString();
-    });
-  } catch (e) { /* never block the page */ }
-})();
 (() => {
   'use strict';
   const root = document.documentElement;
