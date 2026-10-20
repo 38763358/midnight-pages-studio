@@ -1,3 +1,7 @@
 __pycache__/
 screens/
 assets/scenes/tools/esrgan/
+
+# 内部资料，已移至 /workspace/midnight-pages-private/，勿再提交
+research/
+assets/scenes/tools/
