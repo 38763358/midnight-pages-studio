@@ -23,3 +23,6 @@ html.js img{transition:opacity 800ms cubic-bezier(.22,1,.36,1)}html.js img:not(.
 .hero__free{position:absolute;z-index:1;left:var(--gutter);right:var(--gutter);max-width:340px;top:calc(44vh - 12px);top:calc(44svh - 12px);transform:translateY(-100%);margin:0;padding:10px 14px 10px 10px;border:0;background:var(--paper);box-shadow:0 6px 20px #14213a33;grid-template-columns:104px minmax(0,1fr);gap:12px}.hero__free-title{font-size:17px}.hero__free-eyebrow{font-size:10px}.hero__free-cta{font-size:11px;margin-top:2px}}
 @media(min-width:601px){.hero__free{grid-template-columns:112px minmax(0,1fr);gap:14px;margin-top:18px;padding-top:16px}.hero__free-title{font-size:18px}}
 @media(min-width:601px) and (max-height:820px){.hero{min-height:600px}.hero__panel{padding:24px 28px}.hero h1{margin-bottom:16px}.hero .btn{margin-top:18px}.hero__panel>p.buy-save{margin-top:10px}}
+.seasonals,.seasonals [id^="seasonal-"]{scroll-margin-top:150px}.seasonals__list li,.seasonals__bundle{transition:background-color .9s ease}.seasonals .is-anchored{background-color:var(--pale)}
+@media(max-width:600px){.seasonals,.seasonals [id^="seasonal-"]{scroll-margin-top:110px}}
+@media(prefers-reduced-motion:reduce){.seasonals__list li,.seasonals__bundle{transition:none}}
