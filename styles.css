@@ -112,3 +112,21 @@ html.js img{transition:opacity 800ms cubic-bezier(.22,1,.36,1)}html.js img:not(.
 }
 @media(prefers-reduced-motion:reduce){.kit .btn,.kit-hero .btn{transition:none}}
 .kit-hero h1,.kit__head h2,.kit-module h3{text-wrap:balance}
+
+/* Template Kit mobile condense (2026-10-23b) */
+.kit-module__details{display:block;margin:0}
+.kit-module__summary,.kit-module__pages{display:none}
+@media(max-width:600px){
+.kit-module,.kit-module:nth-of-type(even){gap:18px;padding-bottom:28px}
+.kit-module+.kit-module{padding-top:20px}
+.kit-module h3{font-size:28px}
+.kit-module__pages{display:block;font-family:Instrument,serif;color:var(--brick);font-size:20px;margin-top:10px}
+.kit-module__details{margin-top:18px}
+.kit-module__summary{display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid #1a223625;padding-block:14px;font-size:12px;letter-spacing:.04em;cursor:pointer;list-style:none}
+.kit-module__summary::-webkit-details-marker{display:none}
+.kit-module__summary::after{content:"+"}
+.kit-module__details[open]>.kit-module__summary::after{content:"−"}
+.kit-module__summary:focus-visible{outline:2px solid var(--brick);outline-offset:2px}
+.kit-module__details[open] .kit-module__description{margin-top:4px;font-size:13px}
+.kit-module__details[open] .kit-module__items{margin-top:14px}
+}
