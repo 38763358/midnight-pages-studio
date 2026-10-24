@@ -1,6 +1,7 @@
 // Google Ads conversion for Gumroad checkout clicks (AW-18521268865/1V0ICI6vzKMdEIHF0P9E).
 // Based on the Google event snippet; adds a 1 s fallback, a navigate-once flag, a no-gtag fallback,
 // and reads the link's final href at navigation time (main.js may have added utm_* to it).
+// /affiliates links are excluded.
 function gtag_report_conversion(url) {
   var done = false;
   var callback = function () {
@@ -34,6 +35,7 @@ function gtag_report_conversion(url) {
     if (!a) return null;
     try {
       var u = new URL(a.href, location.href);
+      if (/^\/affiliates\/?$/i.test(u.pathname)) return null;
       return /^https?:$/.test(u.protocol) && /(^|\.)gumroad\.com$/i.test(u.hostname) ? a : null;
     } catch (e) { return null; }
   }

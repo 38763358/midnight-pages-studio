@@ -130,3 +130,9 @@ html.js img{transition:opacity 800ms cubic-bezier(.22,1,.36,1)}html.js img:not(.
 .kit-module__details[open] .kit-module__description{margin-top:4px;font-size:13px}
 .kit-module__details[open] .kit-module__items{margin-top:14px}
 }
+
+/* Affiliate line (2026-10-24) */
+.footer__affiliate{width:100%;font-size:12px;margin:0;margin-top:8px;color:#d1d4dc}.footer__affiliate a{text-decoration:underline}
+.kit-offer__affiliate a{text-decoration:underline}
+@media(min-width:601px){.footer__affiliate{margin-top:-14px}}
+@media(max-width:600px){.footer__affiliate{margin-bottom:22px}}
