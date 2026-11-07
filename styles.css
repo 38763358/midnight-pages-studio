@@ -136,3 +136,12 @@ html.js img{transition:opacity 800ms cubic-bezier(.22,1,.36,1)}html.js img:not(.
 .kit-offer__affiliate a{text-decoration:underline}
 @media(min-width:601px){.footer__affiliate{margin-top:-14px}}
 @media(max-width:600px){.footer__affiliate{margin-bottom:22px}}
+
+
+/* Pop-by guide links (2026-11-07) */
+.guides__list{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:28px 20px;margin-top:8px}
+.guides__list a{display:block;text-decoration:none;min-width:0}
+.guides__list img{aspect-ratio:1;object-fit:contain;background:var(--pale)}
+.guides__list h3{font-size:22px;margin-top:12px}
+.guides__list p{color:var(--muted);font-size:14px;line-height:1.5;margin-top:8px}
+.guides__list a:hover h3{text-decoration:underline;text-underline-offset:4px}
