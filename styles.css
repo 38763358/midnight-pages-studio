@@ -136,3 +136,14 @@ html.js img{transition:opacity 800ms cubic-bezier(.22,1,.36,1)}html.js img:not(.
 .kit-offer__affiliate a{text-decoration:underline}
 @media(min-width:601px){.footer__affiliate{margin-top:-14px}}
 @media(max-width:600px){.footer__affiliate{margin-bottom:22px}}
+
+/* Pop-by landing links (2026-11-07) */
+.scenes__list{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:28px 20px}
+.scenes__list a{display:flex;flex-direction:column;min-width:0;text-decoration:none}
+.scenes__list img{aspect-ratio:1;object-fit:contain;background:var(--pale)}
+.scenes__list h3{margin-top:12px;font-size:22px;line-height:1.15}
+.scenes__meta{margin-top:6px;font-size:12px;line-height:1.45;color:var(--muted)}
+.scenes__list a:hover h3{text-decoration:underline;text-underline-offset:4px}
+.scenes__list a:hover img{opacity:.92}
+@media(max-width:1000px){.scenes__list{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:600px){.scenes__list{grid-template-columns:1fr 1fr;gap:22px 14px}.scenes__list h3{font-size:20px}}
